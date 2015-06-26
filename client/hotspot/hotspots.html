@@ -1,14 +1,14 @@
 <template name="hotspots">
 
 	<div id="HotSpot">
-			
+
 		<form id="SearchBox" action="#">
 			<input id="SearchInput" type="text" name="Search" placeholder="Search Venue or Events"/>
 			<input id="SearchIcon" type="submit" value=" "/>
 		</form>
-		
+
 		<div id="HeaderEvent"><span class="Text icon icon-crown"> TOP 5 HOT SPOTS</span></div>
-		
+
 		<div id="HeaderTimeLine">
 			<div id="HeaderDate">
 				<button id="Arrow" class="icon icon-backwards"></button>
@@ -16,27 +16,30 @@
 				<button id="Arrow" class="icon icon-forwards"></button>
 				<input id="InputTime" class="Text" />
 			</div>
-			
+
 			<div id="TimeWindow">
 				<div id="Time">
 					<span id="Hour1" class="TimeAxis"></span><span id="Hour2" class="TimeAxis"></span><span id="Hour3" class="TimeAxis"></span><span id="Hour4" class="TimeAxis"></span><span id="Hour5" class="TimeAxis"></span><span id="Hour6" class="TimeAxis"></span><span id="Hour7" class="TimeAxis"></span>
 				</div><!--Time-->
 			</div><!--TimeWindow-->
 		</div><!--HeaderTimeLine-->
-		
+
 		<div id="HeaderOptions"><span class="Text">LOGO</span></div>
-		
+
 		<div id="Title">
 				{{#each findEvent}}
-				<div id="Box1" class="Top"><span class="Text">{{eventName}}</span></div>
+				<div id="Box1" class="Top">
+					<span class="Text">{{eventName}}</span>
+					<span class="Text">{{eventVenueName}}</span>
+				</div>
 				{{/each}}
 		</div><!--Title-->
-		
+
 		<div id="Timeline">
 			<div class="TimeArrow icon icon-back faded"></div>
 			<div class="TimeArrow icon icon-next faded"></div>
 		</div><!--Timeline-->
-		
+
 		<div id="Options">
 			<form id="SearchOption" action="#">
 				<div id=filterName><h4>Categories</h4></div>
@@ -49,11 +52,11 @@
 				<input type="submit" value="Filter" id="SearchButton"/>
 			</form>
 		</div><!--Options-->
-	
+
 		<div id="FooterEvent"><span class="Text"><a href="#">View All Venues</a></span></div>
 		<div id="FooterSlider"><span class="Text"> | | | | | </span></div>
 		<div id="FooterOptions"></div>
 
 	</div> <!--HotSpot-->
-		
+
 </template>
