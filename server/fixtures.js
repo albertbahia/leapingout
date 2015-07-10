@@ -15,7 +15,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		eventDateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 5
+		eventNumberInAttendance: 5
 	})
 
 		Events.insert({
@@ -29,7 +29,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 10
+		eventNumberInAttendance: 10
 	})
 
 		Events.insert({
@@ -43,7 +43,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 15
+		eventNumberInAttendance: 15
 	})
 
 		Events.insert({
@@ -57,7 +57,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 20
+		eventNumberInAttendance: 20
 	})
 
 		Events.insert({
@@ -71,7 +71,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 25
+		eventNumberInAttendance: 25
 	})
 
 		Events.insert({
@@ -85,7 +85,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 30
+		eventNumberInAttendance: 30
 	})
 
 		Events.insert({
@@ -99,7 +99,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 35
+		eventNumberInAttendance: 35
 	})
 
 		Events.insert({
@@ -113,7 +113,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 40
+		eventNumberInAttendance: 40
 	})
 
 		Events.insert({
@@ -127,7 +127,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 45
+		eventNumberInAttendance: 45
 	})
 
 		Events.insert({
@@ -141,7 +141,7 @@ if (Events.find().count() === 0) {
 		createdUser: "Joey",
 		dateCreated: new Date(now - 5*3600*1000),
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
-		peopleGoing: 50
+		eventNumberInAttendance: 50
 	})
 
 

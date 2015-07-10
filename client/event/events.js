@@ -6,7 +6,7 @@ Template.events.events({
 		Events.insert({
 			eventName: formEventData[0][0].value,
 			eventStreetAddress: formEventData[0][1].value,
-			eventNumberInAttendance: null,
+			eventNumberInAttendance: 20,
 			eventPrice: formEventData[0][2].value,
 			eventVenueName: formEventData[0][3].value,
 			eventDuration: formEventData[0][4].value,
@@ -22,13 +22,13 @@ Template.events.events({
 			eventCreatorId: Meteor.userId(),
 			eventPublic: formEventData[0][12].value,
 			eventPrivate: formEventData[0][13].value,
-			eventVenueId: venue._id //---CHECK
+			eventVenueId: "venueId" //---CHECK
 		});
 
 		// ---Clear form input fields
 		for (var i = 0; i < formEventData[0].length; i++) {
 			formEventData[0][i].value = "";
-		};
+		}
 
 		// ---Prevent default form submit
 		return false;

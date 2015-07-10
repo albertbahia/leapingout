@@ -1,7 +1,7 @@
 <template name="events">
 
 	<div class="header">
-		<h1>This is event page</h1>
+		<h1>Create an Event</h1>
 	</div>
 	<form class="new-event">
 		<div class="form-group">
@@ -53,12 +53,17 @@
 			<label for="eventZipCodeInput">Zip Code:</label>
 			<input type="text" class="form-control" id="eventZipCodeInput" name="eventZipCode" placeholder="Type Zip Code">
 		</div>
-		<div class="form-group">
-			<label for="eventPublicFlag">Public:</label>
-			<input type="text" name="eventPublic">
-			<label for="eventPrivateFlag">Private:</label>
-			<input type="text" name="eventPrivate">
-		</div>
+        <div class="radio">
+            <label class="radio-inline">
+                <input type="radio" name="eventPublic" id="inlineRadio1" value="public" checked> Public
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="eventPrivate" id="inlineRadio2" value="private"> Private
+            </label>
+        </div>
+        <div class="radio">
+
+        </div>
 		<div class="form-group">
 			<button type="button" class="btn btn-primary btn-block" id="create-event">Create Event</button>
 		</div>

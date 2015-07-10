@@ -1,0 +1,38 @@
+<template name="venues">
+    <div class="header">
+        <h1>Create a Venue</h1>
+    </div>
+    <form class="new-venue">
+        <div class="form-group">
+            <label for="venueNameInput">Venue Name:</label>
+            <input type="text" class="form-control" id="venueNameInput" name="venueName" placeholder="Type Venue Name">
+        </div>
+        <div class="form-group">
+            <label for="venueStreetInput">Venue Street:</label>
+            <input type="text" class="form-control" id="venueStreetInput" name="venueStreet" placeholder="Type Venue Street">
+        </div>
+        <div class="form-group">
+            <label for="venueCityInput">Venue City:</label>
+            <input type="text" class="form-control" id="venueCityInput" name="venueCity" placeholder="Type Venue City">
+        </div>
+        <div class="form-group">
+            <label for="venueStateInput">Venue State:</label>
+            <input type="text" class="form-control" id="venueStateInput" name="venueState" placeholder="Type Venue State">
+        </div>
+        <div class="form-group">
+            <label for="venueLatLongInput">Venue Latitude/Longitude</label>
+            <input type="text" class="form-control" id="venueLatLongInput" name="venueLatLong" placeholder="Type Venue Latitude/Longitude">
+        </div>
+        <div class="form-group">
+            <label for="venueCountryInput">Venue Country:</label>
+            <input type="text" class="form-control" id="venueCountryInput" name="venueCountry" placeholder="Type Venue Country">
+        </div>
+        <div class="form-group">
+            <label for="venueCreatorIdInput">Venue Creator:</label>
+            <p>{{ currentUser.username }}</p>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-block" id="create-venue">Create Venue</button>
+        </div>
+    </form>
+</template>
