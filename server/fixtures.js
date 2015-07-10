@@ -2,7 +2,7 @@
 
 if (Events.find().count() === 0) {
 
-	var now = new Date().getTime();
+	var now = Date.now();
 
 	Events.insert({
 		eventName: "Happy Hour",
@@ -13,7 +13,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		eventDateCreated: new Date(now - 5*3600*1000),
+		eventDateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 5
 	})
@@ -27,7 +27,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 10
 	})
@@ -41,7 +41,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 15
 	})
@@ -55,7 +55,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 20
 	})
@@ -69,7 +69,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 25
 	})
@@ -83,7 +83,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 30
 	})
@@ -97,7 +97,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 35
 	})
@@ -111,7 +111,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 40
 	})
@@ -125,7 +125,7 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 45
 	})
@@ -139,10 +139,39 @@ if (Events.find().count() === 0) {
 		eventStartTime: "1:00pm",
 		eventEndTime: "4:00pm",
 		createdUser: "Joey",
-		dateCreated: new Date(now - 5*3600*1000),
+		dateCreated: now,
 		summary: "Happy Hour at the Grasshoppper!!! 1:00pm to 4:00pm",
 		eventNumberInAttendance: 50
 	})
+}
 
+if (Venues.find().count() === 0) {
 
+	var now = Date.now();
+
+	Venues.insert({
+		venueName: "testVenueName1",
+		venueStreetAddress: "testVenueStreetAddress1",
+		venueCity: "testVenueCity1",
+		venueState: "testVenueState1",
+		venueLatLong: "testVenueLatLong1",
+		venuePopularityRating: 7,
+		venueCountry: "testVenueCountry1",
+		venueEventId: "testVenueEventId1",
+		venueCreatorId: "testCreatorId1",
+		venueCreatedAt: now
+	})
+
+	Venues.insert({
+		venueName: "testVenueName1",
+		venueStreetAddress: "testVenueStreetAddress1",
+		venueCity: "testVenueCity1",
+		venueState: "testVenueState1",
+		venueLatLong: "testVenueLatLong1",
+		venuePopularityRating: 7,
+		venueCountry: "testVenueCountry1",
+		venueEventId: "testVenueEventId1",
+		venueCreatorId: "testCreatorId1",
+		venueCreatedAt: now
+	})
 }
