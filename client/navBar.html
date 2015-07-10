@@ -1,13 +1,12 @@
 <template name="navBar">
 
-<nav class="navbar navbar-default" role="navigation">
-	<a href="{{pathFor "landing"}}">Landing</a>
-    {{#if currentUser}}
-	    <a href="{{pathFor "profile"}}">Profile</a>
-    {{/if}}
-	<a href="{{pathFor "events"}}">Event</a>
-    <a href="{{pathFor "venues"}}">Venue</a>
-</nav>
-
+    <nav class="navbar navbar-default" role="navigation">
+        <a href="{{pathFor "landing"}}">Landing</a>
+        {{#if currentUser}}
+            <a href="{{pathFor "profile"}}">Profile</a>
+        {{/if}}
+        <a href="{{pathFor "events"}}">Event</a>
+        <a href="{{pathFor "venues"}}">Venue</a>
+    </nav>
 
 </template>
