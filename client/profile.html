@@ -1,7 +1,11 @@
 <template name="profile">
-
-	<div>
-		<h1>This is profile page</h1>
-	</div>
-
+    {{#if currentUser}}
+        <div>
+            <h1>This is your profile page</h1>
+        </div>
+    {{else}}
+        <div>
+            <h1>Please login to view your profile.</h1>
+        </div>
+    {{/if}}
 </template>

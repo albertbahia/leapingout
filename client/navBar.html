@@ -2,7 +2,9 @@
 
 <nav class="navbar navbar-default" role="navigation">
 	<a href="{{pathFor "landing"}}">Landing</a>
-	<a href="{{pathFor "profile"}}">Profile</a>
+    {{#if currentUser}}
+	    <a href="{{pathFor "profile"}}">Profile</a>
+    {{/if}}
 	<a href="{{pathFor "events"}}">Event</a>
     <a href="{{pathFor "venues"}}">Venue</a>
 </nav>
