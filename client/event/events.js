@@ -1,7 +1,9 @@
 Template.events.events({
 	"click #create-event" : function(event) {
+		event.preventDefault();
 
 		var formEventData = document.getElementsByClassName("new-event");
+		var currentUserId = Meteor.userId();
 
 		Events.insert({
 			eventName: formEventData[0][0].value,
@@ -19,7 +21,7 @@ Template.events.events({
 			eventCity: formEventData[0][9].value,
 			eventState: formEventData[0][10].value,
 			eventZipCode: formEventData[0][11].value,
-			eventCreatorId: Meteor.userId(),
+			eventCreatorId: currentUserId,
 			eventPublic: formEventData[0][12].value,
 			eventPrivate: formEventData[0][13].value,
 			eventVenueId: "venueId" //---CHECK

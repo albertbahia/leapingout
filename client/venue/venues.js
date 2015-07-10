@@ -1,7 +1,9 @@
 Template.venues.events({
-   "click #create-venue" : function() {
+   "click #create-venue" : function(event) {
+       event.preventDefault();
 
        var formVenueData = document.getElementsByClassName("new-venue");
+       var currentUserId = Meteor.userId();
 
        Venues.insert({
            venueName: formVenueData[0][0].value,
@@ -12,7 +14,7 @@ Template.venues.events({
            venuePopularityRating: 0,
            venueCountry: formVenueData[0][5].value,
            venueEventId: "testVenueEventId",
-           venueCreatorId: "testVenueCreatorId",
+           venueCreatorId: currentUserId,
            venueCreatedAt: Date.now()
        });
 

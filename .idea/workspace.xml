@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d2bf62e-ad00-49e7-ba9c-a0d9d3561601" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/event/events.js" afterPath="$PROJECT_DIR$/client/event/events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/venue/venues.html" afterPath="$PROJECT_DIR$/client/venue/venues.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/venue/venues.js" afterPath="$PROJECT_DIR$/client/venue/venues.js" />
     </list>
     <ignored path="leapingout.iws" />
@@ -26,8 +28,8 @@
       <file leaf-file-name="events.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/event/events.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7777777">
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <state vertical-scroll-proportion="-12.777778">
+              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -46,8 +48,8 @@
       <file leaf-file-name="venues.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/venue/venues.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            <state vertical-scroll-proportion="-23.75">
+              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -56,8 +58,8 @@
       <file leaf-file-name="venues.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/venue/venues.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38681948">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.32234958">
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -118,10 +120,10 @@
         <option value="$PROJECT_DIR$/lib/router.js" />
         <option value="$PROJECT_DIR$/client/venue/venue.html" />
         <option value="$PROJECT_DIR$/client/navBar.html" />
-        <option value="$PROJECT_DIR$/client/venue/venues.html" />
-        <option value="$PROJECT_DIR$/client/event/events.js" />
         <option value="$PROJECT_DIR$/server/fixtures.js" />
+        <option value="$PROJECT_DIR$/client/venue/venues.html" />
         <option value="$PROJECT_DIR$/client/venue/venues.js" />
+        <option value="$PROJECT_DIR$/client/event/events.js" />
       </list>
     </option>
   </component>
@@ -430,24 +432,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/event/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7777777">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        <state vertical-scroll-proportion="-12.777778">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/venue/venues.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state vertical-scroll-proportion="-23.75">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/venue/venues.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38681948">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.32234958">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,5 @@
 <template name="venues">
+    {{#if currentUser}}
     <div class="header">
         <h1>Create a Venue</h1>
     </div>
@@ -35,4 +36,5 @@
             <button type="button" class="btn btn-primary btn-block" id="create-venue">Create Venue</button>
         </div>
     </form>
+    {{/if}}
 </template>
