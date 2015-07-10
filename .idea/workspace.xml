@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d2bf62e-ad00-49e7-ba9c-a0d9d3561601" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/venuesDatabase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/event/events.html" afterPath="$PROJECT_DIR$/client/event/events.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/event/events.js" afterPath="$PROJECT_DIR$/client/event/events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/fixtures.js" afterPath="$PROJECT_DIR$/server/fixtures.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/hotspot/hotspots.html" afterPath="$PROJECT_DIR$/client/hotspot/hotspots.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/hotspot/hotspots.js" afterPath="$PROJECT_DIR$/client/hotspot/hotspots.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/navBar.html" afterPath="$PROJECT_DIR$/client/navBar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/router.js" afterPath="$PROJECT_DIR$/lib/router.js" />
-    </list>
+    <list default="true" id="7d2bf62e-ad00-49e7-ba9c-a0d9d3561601" name="Default" comment="" />
     <ignored path="leapingout.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venues.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="venues.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/venue/venues.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.25">
+            <state vertical-scroll-proportion="0.5940594">
               <caret line="34" column="98" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
               <folding />
             </state>
@@ -92,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hotspots.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hotspots.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/hotspot/hotspots.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4389439">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            <state vertical-scroll-proportion="-27.0">
+              <caret line="44" column="60" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -430,26 +419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/venue/venues.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/event/events.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.0">
           <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/venue/venues.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.25">
-          <caret line="34" column="98" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -464,8 +437,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/hotspot/hotspots.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4389439">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        <state vertical-scroll-proportion="-27.0">
+          <caret line="44" column="60" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/venue/venues.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/venue/venues.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5940594">
+          <caret line="34" column="98" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
           <folding />
         </state>
       </provider>
