@@ -15,5 +15,13 @@ Template.venues.events({
            venueCreatorId: "testVenueCreatorId",
            venueCreatedAt: Date.now()
        });
+
+       //---Clear form input fields
+       for (var i = 0; i < formVenueData[0].length; i++) {
+           formVenueData[0][i].value = "";
+       }
+
+       //---Prevent default form submit
+       return false;
    }
 });
