@@ -2,9 +2,14 @@ Meteor.subscribe("userData");
 
 Template.profile.helpers({
     userEmail: function() {
+        //console.log(Meteor.user().emails[0]);
         return Meteor.user().emails[0].address;
     },
     userFirstName: function() {
-        return Meteor.user().profile.name;
+        console.log(Meteor.user());
+        return Meteor.user().profile.userFirstName;
+    },
+    userLastName: function() {
+        return Meteor.user().profile.userLastName;
     }
 });
