@@ -1,3 +1,7 @@
+.profile-content a {
+    text-decoration: none;
+}
+
 .profile-image {
     display: inline-block;
 }
