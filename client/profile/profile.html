@@ -2,7 +2,7 @@
     {{#if currentUser}}
         <div class="profile-content">
             <h2>Profile Information</h2>
-            <div class="row">
+            <div class="row profile-section">
                 <div class="profile-image col-md-6">
                     <img src="http://placekitten.com/g/400/500" class="img-rounded img-responsive" alt="flickr image" />
                 </div>
@@ -37,7 +37,9 @@
                     </div>
                 </div>
             </div>
-
+            <div class="row">
+                <a href="{{pathFor "editProfile"}}"><button type="button" class="btn btn-info btn-block editButton">Edit Profile</button></a>
+            </div>
         </div>
     {{else}}
         <div>
