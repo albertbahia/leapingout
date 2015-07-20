@@ -13,3 +13,9 @@ Template.profile.helpers({
         return Meteor.user().profile.userLastName;
     }
 });
+
+Template.editProfile.helpers({
+    userEmail: function() {
+        return Meteor.user().emails[0].address;
+    }
+});

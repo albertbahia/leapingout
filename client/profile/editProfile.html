@@ -1,3 +1,49 @@
 <template name="editProfile">
-    <h1>Edit Profile</h1>
+    {{#if currentUser}}
+        <div class="profile-content">
+            <h2>Edit Profile</h2>
+            <div class="row profile-section">
+                <div class="profile-image col-md-4">
+                    <img src="/images/profile/game_of_thrones_emilia_clarke.jpg" class="img-rounded img-responsive" alt="flickr image" />
+                </div>
+                <div class="profile-info col-md-8">
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <p>{{userEmail}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label>First Name:</label>
+                        <p>{{userFirstName}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name:</label>
+                        <p>{{userLastName}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <p>Male</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Age:</label>
+                        <p>31</p>
+                    </div>
+                    <div class="form-group">
+                        <label>State:</label>
+                        <p>NJ</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Zip Code:</label>
+                        <p>07039</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <a href="{{pathFor "profile"}}"><button type="button" class="btn btn-primary btn-block editButton">Back to Profile</button></a>
+            </div>
+        </div>
+    {{else}}
+        <div>
+            <h1>Please login to view your profile.</h1>
+        </div>
+    {{/if}}
 </template>
