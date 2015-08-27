@@ -56,6 +56,10 @@ div
 		overflow: hidden; */
 	}
 
+#searchSection {
+	margin-bottom: 20px;
+}
+
 	#SearchBox
 	{
 		width: 100%; /*1204px;*/
@@ -175,10 +179,9 @@ div
 		/*background:url("../image/Grid.png");*/
 	}
 
-#HeaderOptions
-	{
+#logoSection {
 		width: 16%; /*200px;*/
-		height: 64px;
+		height: 70px;
 		border: 1px solid black;
 		text-align: center;
 		line-height: 60px;
