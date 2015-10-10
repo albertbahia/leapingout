@@ -18,3 +18,4 @@ sanjo:jasmine
 velocity:html-reporter
 email
 accounts-base
+accounts-ui-unstyled
