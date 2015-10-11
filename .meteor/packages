@@ -10,11 +10,11 @@ insecure
 iron:router
 twbs:bootstrap
 underscore
-ian:accounts-ui-bootstrap-3
-accounts-password
 jquery
 cwohlman:pickadate
 sanjo:jasmine
 velocity:html-reporter
 email
 accounts-base
+accounts-password
+accounts-ui-unstyled
