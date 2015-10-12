@@ -1,6 +1,6 @@
 <template name="editProfile">
     {{#if currentUser}}
-        <div class="profile-content">
+        <div class="profile-content-edit">
             <h2>Edit Profile</h2>
             <div class="row profile-section">
                 <div class="profile-image col-md-4">
@@ -9,13 +9,13 @@
                 <div class="profile-info col-md-8">
                     <div class="form-group">
                         <label>Email:</label>
-                        <p>{{userEmail}}</p>
-                        <input type="text" class="form-control" id="userEmailEdit" name="userEmail" placeholder="Type Email">
+                          <p>{{ userEmail }}</p>
+                          <input type="text" class="form-control" id="userEmailEdit" name="userEmail" placeholder="Type Email">
                     </div>
                     <div class="form-group">
                         <label for="userFirstName">First Name:</label>
                         <p>{{userFirstName}}</p>
-                        <input type="text" class="form-control" id="userFirstNameEdit" name="userFirstName" placeholder="My name is Nickster">
+                        <input type="text" class="form-control" id="userFirstNameEdit" name="userFirstName" placeholder="Type First Name">
                     </div>
                     <div class="form-group">
                         <label>Last Name:</label>
@@ -25,23 +25,30 @@
                     <div class="form-group">
                         <label>Gender:</label>
                         <p>Male</p>
+                        <input type="text" class="form-control" id="userGenderEdit" name="userGender" placeholder="Type Gender">
                     </div>
                     <div class="form-group">
                         <label>Age:</label>
                         <p>31</p>
+                        <input type="text" class="form-control" id="userAgeEdit" name="userAge" placeholder="Type Age">
                     </div>
                     <div class="form-group">
                         <label>State:</label>
                         <p>NJ</p>
+                        <input type="text" class="form-control" id="userStateEdit" name="userState" placeholder="Type State">
                     </div>
                     <div class="form-group">
                         <label>Zip Code:</label>
                         <p>07039</p>
+                        <input type="text" class="form-control" id="userZipCode" name="userZipCode" placeholder="Type Zip Code">
+                    </div>
+                    <div class="form-group">
+                      <button type="button" id="edit-profile-button" class="btn btn-info btn-block edit-button">Edit Profile</button>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <a href="{{pathFor "profile"}}"><button type="button" class="btn btn-primary btn-block editButton">Back to Profile</button></a>
+                <a href="{{pathFor "profile"}}"><button type="button" class="btn btn-primary btn-block">Back to Profile</button></a>
             </div>
         </div>
     {{else}}
