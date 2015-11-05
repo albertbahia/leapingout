@@ -1,32 +1,4 @@
 /* Handles default styling for landing page */
-/*
-Structure:
-*
-	HotSpot
-		SearchBox
-			SearchInput
-			SearchIcon
-
-		HeaderEvent
-		HeaderTimeLine
-			HeaderDate
-				Arrow
-				InputDate
-				InputTime
-			TimeWindow
-				Time
-		HeaderOptions
-
-		Title
-		Timeline
-			TimeArrow
-		Options
-
-		FooterEvent
-		FooterSlider
-		FooterOptions
-
-*/
 *
 	{
 		margin: 0;
