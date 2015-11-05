@@ -19,3 +19,23 @@ Template.editProfile.helpers({
         return Meteor.user().emails[0].address;
     }
 });
+
+Template.editProfile.events ({
+'change #file-input' : function(e) {
+      FS.Utility.eachFile(e, function(file) {
+        var newFile = new FS.File(file);
+        
+        Images.insert(newFile, function (error, fileObj) {
+          if (error) {
+            toastr.error("Upload failed... please try again.");
+          } else {
+            toastr.success('Upload succeeded!');
+			console.log(Meteor.settings);
+          }
+      });
+    });
+  }	
+	
+	
+	
+});
