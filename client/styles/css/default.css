@@ -296,10 +296,13 @@ div
 		line-height: 1.5;
 	}
 
-small
-	{
-		font-size: 80%;
-	}
+small {
+	font-size: 80%;
+}
+
+.hide {
+	display: none;
+}
 
 /*====================*/
 @media all and (min-width: 610px) and (max-width: 900px) {
@@ -359,5 +362,4 @@ small
 		{
 			width: calc(100% - 14.375em);
 		}
-
 }
