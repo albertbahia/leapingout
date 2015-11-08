@@ -1,0 +1,24 @@
+<template name="signUpModal">
+	<div class="modal fade">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				{{> loginButtons}}
+
+				<div class="modal-header">
+					<h4 class="modal-title">Sign Up!</h4>
+				</div>
+
+				<div class="modal-body">
+					<label for="email">Email</label>
+					<input type="text" name="" id="emailAddress" placeholder="Enter Email Address" />
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="createAccountButton">Create Account</button>
+					<button type="button" class="btn btn-default" id="cancelButton">Cancel</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</template>

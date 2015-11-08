@@ -1,7 +1,7 @@
 <template name="header">
 
 	<nav class="navbar navbar-default" role="navigation">
-	
+
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
 				<span class="sr-only">Toggle navigation</span>
@@ -11,21 +11,14 @@
 			</button>
 			<a class="navbar-brand" href="{{pathFor "landing"}}">Leaping Out</a>
 		</div>
-		
+
 		<div class="collapse navbar-collapse" id="navigation">
-			
-			<!-- <ul class="nav navbar-nav navbar-right">
-				{{#if currentUser}}
-					<li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>
-				{{/if}}
-			</ul> -->
-			
+			<button type="button" class="btn btn-primary" id="signup">Sign Up</button>
 			<ul class="nav navbar-nav navbar-right">
-				{{> loginButtons}}
+				<!-- {{> loginButtons}} -->
 			</ul>
-			
 		</div>
-		
+
 	</nav>
 
 </template>
