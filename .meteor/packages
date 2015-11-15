@@ -15,7 +15,6 @@ velocity:html-reporter
 email
 accounts-base
 accounts-password
-accounts-ui-unstyled
 cfs:standard-packages
 cfs:gridfs
 cfs:s3
@@ -37,4 +36,4 @@ raix:ui-dropped-event
 chrismbeckett:toastr
 reactive-var
 peppelg:bootstrap-3-modal
-useraccounts:bootstrap
+ian:accounts-ui-bootstrap-3
