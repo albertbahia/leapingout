@@ -19,12 +19,3 @@ Accounts.emailTemplates.verifyEmail = {
               + "Thanks.\n";
    }
 }
-
-// ---Tests out email verification feature---
-// Email.send({
-//   from: "verification@leapingout.com",
-//   to: "albert.bahia1@gmail.com",
-//   subject: "Please verify email.",
-//   text: "Its pretty easy."
-// });
-// ------------------------------------------
