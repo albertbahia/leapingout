@@ -22,6 +22,11 @@ Accounts.ui.config({
     inputType: 'text',
     visible: true
   }, {
+    fieldName: 'userBirthday',
+    fieldLabel: 'Birthday',
+    inputType: 'text',
+    visible: true
+  }, {
     fieldName: 'userGender',
     fieldLabel: 'Gender',
     inputType: 'radio',
@@ -36,11 +41,6 @@ Accounts.ui.config({
       value: 'f',
       checked: 'checked'
     }],
-    visible: true
-  }, {
-    fieldName: 'userBirthday',
-    fieldLabel: 'Birthday',
-    inputType: 'text',
     visible: true
   }, {
     fieldName: 'userTerms',
