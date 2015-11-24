@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-autopublish
 insecure
 iron:router
 twbs:bootstrap
@@ -16,7 +15,6 @@ velocity:html-reporter
 email
 accounts-base
 accounts-password
-accounts-ui-unstyled
 cfs:standard-packages
 cfs:gridfs
 cfs:s3
@@ -36,6 +34,6 @@ spacebars
 check
 raix:ui-dropped-event
 chrismbeckett:toastr
-lepozepo:s3
 reactive-var
-accounts-ui
+peppelg:bootstrap-3-modal
+ian:accounts-ui-bootstrap-3
