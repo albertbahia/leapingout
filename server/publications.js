@@ -3,5 +3,6 @@ Meteor.publish('images', function(limit) {
 
   return Images.find({}, {
     limit: limit
+	sort: {uploadedAt:-1}
   });
 });
