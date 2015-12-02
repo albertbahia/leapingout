@@ -1,6 +1,6 @@
 {
 	"public": {
-    "recordsPerPage" : "5"
+    "recordsPerPage" : "1"
   },
   "private": {
 		"AWSAccessKeyId" : "AKIAJB2YQKVYF2HSMZSQ",
