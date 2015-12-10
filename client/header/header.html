@@ -10,6 +10,11 @@
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="{{pathFor "landing"}}">Leaping Out</a>
+			<a href="{{pathFor "landing"}}">Landing</a>
+        {{#if currentUser}}
+            <a href="{{pathFor "profile"}}">| Profile</a> |
+            <a href="{{pathFor "events"}}">Create Event</a>
+        {{/if}}
 		</div>
 
 		<div class="collapse navbar-collapse" id="navigation">
