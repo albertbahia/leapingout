@@ -43,6 +43,15 @@ div
 	  -webkit-box-sizing:border-box;
 	}
 
+	.yellow {
+		background-color: yellow;
+	}
+
+#hotspots-title {
+	text-align: center;
+	font-size: xx-large;
+}
+
 #HotSpot
 	{
 		width: 80%;/*1206px;*/
@@ -56,10 +65,27 @@ div
 		overflow: hidden; */
 	}
 
-#searchSection {
-	margin-bottom: 20px;
+#search-section {
+	margin: 10px 0px;
+	padding: 0px 300px;
 }
 
+#search {
+	width: 700px;
+	height: 40px;
+}
+
+#search-submit-button {
+	height: 40px;
+	width: 100px;
+	float: right;
+	margin-left: 10px;
+}
+
+.date-section {
+	padding: 0px 400px;
+	text-align: center;
+}
 	#SearchBox
 	{
 		width: 100%; /*1204px;*/
@@ -210,17 +236,14 @@ div
 		margin-left: auto;
 	}
 
-#Timeline
-	{
-		width: 68%; /*800px;*/
-		height: 330px;
-		float: left;
-		/*clear: left;*/
-		border: 1px solid black;
-		-webkit-transform-style: preserve-3d;
-		-moz-transform-style: preserve-3d;
-		transform-style: preserve-3d;
-	}
+#channel-guide-section {
+	border-style: solid;
+}
+
+.channel-guide {
+	border-style: solid;
+	height: 100%;
+}
 
 .TimeArrow
 	{
@@ -260,26 +283,26 @@ div
 		height: 20px;
 	}
 
-#FooterEvent
-	{
-		width: 16%; /*200px;*/
-		height: 40px;
-		float: left;
-		clear: left;
-		border: 1px solid black;
-		text-align: center;
-		line-height: 40px;
-	}
+.footer-event {
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
 
-#FooterSlider
-	{
-		width: 68%; /*800px;*/
-		height: 40px;
-		float: left;
-		border: 1px solid black;
-		text-align: center;
-		line-height: 40px;
-	}
+.footer {
+	margin: 30px 0px;
+}
+
+.footer-button {
+
+}
+
+.footer-slider {
+	height: 40px;
+	border: 1px solid black;
+	text-align: center;
+	line-height: 40px;
+}
 
 #FooterOptions
 	{
