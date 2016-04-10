@@ -1,14 +1,3 @@
-<template name="searchBox">
-  <div class="row" id="search-section">
-    <form class="form-inline" action="#">
-      <div class="form-group">
-        <input class="form-control" id="search" type="text" name="Search" placeholder="Search Venue or Events"/>
-        <button class="btn btn-primary" id="search-submit-button" type="submit">Search</button>
-      </div>
-    </form>
-  </div>
-</template>
-
 <template name="searchResults">
   {{#each getEvents}}
     <div class="event">

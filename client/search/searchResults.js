@@ -15,6 +15,8 @@ Template.searchResults.helpers({
 Template.searchBox.events({
   "keyup #search": _.throttle(function(e) {
     var text = $(e.target).val().trim();
-    EventSearch.search(text);
+    if (text !== '') {
+      EventSearch.search(text);
+    }
   }, 200)
 });
