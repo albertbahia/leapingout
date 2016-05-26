@@ -1,0 +1,12 @@
+<template name="searchResults">
+  {{#each getEvents}}
+    <div class="event">
+      <h4 class="name">
+        <a href="#" target="_blank">{{{eventName}}}</a>
+      </h4>
+      <div class="summary">
+        {{{summary}}}
+      </div>
+    </div>
+  {{/each}}
+</template>

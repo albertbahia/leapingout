@@ -1,0 +1,16 @@
+<template name="channelGuide">
+	<div class="col-lg-4">
+		<div id="hotspots-title">Most Popular Events</div>
+		{{#each findEvent}}
+		<div id="Box1" class="Top">
+			<span class="Text">{{eventName}}</span>
+		</div>
+		{{/each}}
+	</div>
+	<div class="col-lg-8 channel-guide">
+		<h1>Channel Guide</h1>
+		<div id ='chart'>
+		{{>barGuide}}
+	 </div>	
+	</div>
+</template>

@@ -1,70 +1,18 @@
 <template name="hotspots">
-
-	<div id="HotSpot">
-		<div class="row" id="searchSection">
-			<div class="col-xs-4 col-sm-6"></div>
-			<form class="form-inline col-xs-8 col-sm-4" action="#">
-				<div class="form-group">
-					<input class="form-control" id="search" type="text" name="Search" placeholder="Search Venue or Events"/>
-				</div>
-				<button class="btn btn-primary" type="submit">Search</button>
-			</form>
+	<div class="hotspots">
+			{{> searchBox}}
+		<!-- Date Picker / Template -->
+		{{> datePicker }}
+		<!-- End Date Picker -->
+		<!-- Channel Guide Interface / Template -->
+		<div class="row" id="channel-guide-section">
+			{{> channelGuide }}
 		</div>
-
-		<div id="HeaderEvent"><span class="Text icon icon-crown"> TOP 5 HOT SPOTS</span></div>
-
-		<div id="HeaderTimeLine">
-			<div id="HeaderDate">
-				<button id="Arrow" class="icon icon-backwards"></button>
-				<input id="InputDate" class="Text" value=""/>
-				<button id="Arrow" class="icon icon-forwards"></button>
-				<input id="InputTime" class="Text" />
-			</div>
-
-			<div id="TimeWindow">
-				<div id="Time">
-					<span id="Hour1" class="TimeAxis"></span><span id="Hour2" class="TimeAxis"></span><span id="Hour3" class="TimeAxis"></span><span id="Hour4" class="TimeAxis"></span><span id="Hour5" class="TimeAxis"></span><span id="Hour6" class="TimeAxis"></span><span id="Hour7" class="TimeAxis"></span>
-				</div><!--Time-->
-			</div><!--TimeWindow-->
-		</div><!--HeaderTimeLine-->
-
-		<div id="logoSection">
-			<div class="imageHolder">
-				<img src="/images/backgroundCity.svg"/>
-			</div>
+		<!-- End Channel Guide -->
+		<div class="row footer">
+				<button class="btn btn-primary col-lg-4 footer-button" id="about-button">About</button>
+				<button class="btn btn-info col-lg-4 footer-button" id="blog-button">Blog</button>
+				<button class="btn btn-success col-lg-4 footer-button" id="feedback-button">Feedback</button>
 		</div>
-
-		<div id="Title">
-				{{#each findEvent}}
-				<div id="Box1" class="Top">
-					<span class="Text">{{eventName}}</span>
-					<!--<span class="Text">{{eventVenueName}}</span>-->
-				</div>
-				{{/each}}
-		</div><!--Title-->
-
-		<div id="Timeline">
-			<div class="TimeArrow icon icon-back faded"></div>
-			<div class="TimeArrow icon icon-next faded"></div>
-		</div><!--Timeline-->
-
-		<div id="Options">
-			<form id="SearchOption" action="#">
-				<div id=filterName><h4>Categories</h4></div>
-				<input type="checkbox" name="option" value="option1"/>Option1 <br />
-				<input type="checkbox" name="option" value="option2"/>Option2 <br />
-				<input type="checkbox" name="option" value="option3"/>Option3 <br />
-				<input type="checkbox" name="option" value="option4"/>Option4 <br />
-				<input type="checkbox" name="option" value="option5"/>Option5 <br />
-				<input type="checkbox" name="option" value="option6"/>Option6 <br />
-				<button type="submit" class="btn btn-default" id="filterButton">Filter</button>
-			</form>
-		</div><!--Options-->
-
-		<div id="FooterEvent"><span class="Text"><a href="{{pathFor "venues"}}">View All Venues</a></span></div>
-		<div id="FooterSlider"><span class="Text"> | | | | | </span></div>
-		<div id="FooterOptions"></div>
-
-	</div> <!--HotSpot-->
-
+	</div>
 </template>

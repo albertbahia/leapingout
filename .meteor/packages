@@ -4,16 +4,42 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
-autopublish
 insecure
 iron:router
 twbs:bootstrap
 underscore
-ian:accounts-ui-bootstrap-3
-accounts-password
 jquery
 cwohlman:pickadate
 sanjo:jasmine
 velocity:html-reporter
 email
+accounts-base
+accounts-password
+cfs:standard-packages
+cfs:gridfs
+cfs:s3
+cfs:dropbox
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+raix:ui-dropped-event
+chrismbeckett:toastr
+reactive-var
+peppelg:bootstrap-3-modal
+ian:accounts-ui-bootstrap-3
+highcharts:highcharts-meteor
+
+
+highcharts-container
+maazalik:highcharts
+meteorhacks:search-source
