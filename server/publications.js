@@ -10,3 +10,7 @@ Meteor.publish("images", function(limit) {
 Meteor.publish("events", function() {
 	return Events.find({}, {sort: {eventNumberInAttendance:-1}, limit:5});
 });
+
+Meteor.publish("venues", function() {
+  return Venues.find({});
+})
