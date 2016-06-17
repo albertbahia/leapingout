@@ -1,7 +1,9 @@
 Meteor.subscribe("events");
+Meteor.subscribe("venues");
 
 Template.venueProfile.helpers({
   findVenue: function() {
-    return Events.find({});
+    console.log(Venues.find({}));
+    return Venues.find({});
   }
 });
