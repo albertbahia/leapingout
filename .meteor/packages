@@ -37,3 +37,9 @@ chrismbeckett:toastr
 reactive-var
 peppelg:bootstrap-3-modal
 ian:accounts-ui-bootstrap-3
+highcharts:highcharts-meteor
+
+
+highcharts-container
+maazalik:highcharts
+meteorhacks:search-source

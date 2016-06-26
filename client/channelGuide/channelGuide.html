@@ -4,10 +4,14 @@
 		{{#each findEvent}}
 		<div id="Box1" class="Top">
 			<span class="Text">{{eventName}}</span>
+			<a href="{{pathFor 'venueProfile'}}">{{eventVenueName}}</a>
 		</div>
 		{{/each}}
 	</div>
 	<div class="col-lg-8 channel-guide">
 		<h1>Channel Guide</h1>
+		<div id ='chart'>
+		{{>barGuide}}
+	 </div>
 	</div>
 </template>

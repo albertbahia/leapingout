@@ -1,16 +1,9 @@
 <template name="hotspots">
-
 	<div class="hotspots">
-		<div class="row" id="search-section">
-			<form class="form-inline" action="#">
-				<div class="form-group">
-					<input class="form-control" id="search" type="text" name="Search" placeholder="Search Venue or Events"/>
-					<button class="btn btn-primary" id="search-submit-button" type="submit">Search</button>
-				</div>
-			</form>
-		</div>
+			{{> searchBox}}
 		<!-- Date Picker / Template -->
-		{{> datePicker }}
+		<!-- {{> datePicker }} -->
+
 		<!-- End Date Picker -->
 		<!-- Channel Guide Interface / Template -->
 		<div class="row" id="channel-guide-section">
@@ -23,5 +16,4 @@
 				<button class="btn btn-success col-lg-4 footer-button" id="feedback-button">Feedback</button>
 		</div>
 	</div>
-
 </template>
