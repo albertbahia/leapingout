@@ -19,3 +19,11 @@ Accounts.emailTemplates.verifyEmail = {
               + "Thanks.\n";
    }
 }
+
+Accounts.onCreateUser(function(options, user) {
+  console.log(options);
+  console.log(user);
+
+  // user.profile.image =
+  return user;
+});
