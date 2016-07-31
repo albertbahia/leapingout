@@ -1,5 +1,5 @@
 
-process.env.MAIL_URL = "smtp://pigeonplan@gmail.com:g3VbS2Hx9H-aHx-2pZaT_A@smtp.mandrillapp.com:587/";
+// process.env.MAIL_URL = "smtp://pigeonplan@gmail.com:g3VbS2Hx9H-aHx-2pZaT_A@smtp.mandrillapp.com:587/";
 
 //process.env.MAIL_URL = "smtp://mmc228@gmail.com:nCQFyqPblIKKucd1by72JQ@smtp.mandrillapp.com:587/";
 
@@ -23,7 +23,8 @@ Accounts.emailTemplates.verifyEmail = {
 Accounts.onCreateUser(function(options, user) {
   console.log(options);
   console.log(user);
-
+  user.profile = options.profile;
+  user.profile.image_url = "http://www.essetinoconnexions.com/wp-content/uploads/2015/08/default.jpg";
   // user.profile.image =
   return user;
 });
