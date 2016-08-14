@@ -50,10 +50,19 @@
                 <button type="button" class="btn btn-primary btn-block editButton">Back to Profile</button>
             </a>
         </div>
+        {{> s3_tester}}
     </div>
     {{else}}
     <div>
         <h1>Please login to view your profile.</h1>
     </div>
     {{/if}}
+</template>
+
+<template name="s3_tester">
+    <input type="file" class="file_bag">
+    <button class="upload">Upload</button>
+    {{#each files}}
+    <p>{{percent_uploaded}}</p>
+    {{/each}}
 </template>

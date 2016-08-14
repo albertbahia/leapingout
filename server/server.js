@@ -28,3 +28,9 @@ Accounts.onCreateUser(function(options, user) {
   // user.profile.image =
   return user;
 });
+
+S3.config = {
+  key: "AKIAJB2YQKVYF2HSMZSQ",
+  secret: "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",
+  bucket: "leapingout"
+}

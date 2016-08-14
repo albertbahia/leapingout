@@ -50,4 +50,30 @@ Template.editProfile.events({
         });
     }
 });
+
+Template.s3_tester.events({
+  "click button.upload": function() {
+    var files = $("input.file_bag")[0].files
+
+    S3.upload({
+      files: files,
+      path: "Images" //subfolder for the leaping S3 bucket
+    }, function(error,response) {
+      if (error) {
+        throw error;
+      } else {
+        console.log(response.secure_url);
+        console.log(Meteor.user().profile.image_url);
+        Meteor.users.update(Meteor.userId(), {$set: {"profile.image_url": response.secure_url}})
+      }
+
+    })
+  }
+});
+
+Template.s3_tester.helpers({
+  "files": function() {
+    return S3.collection.find();
+  }
+});
 // ----------------------------
