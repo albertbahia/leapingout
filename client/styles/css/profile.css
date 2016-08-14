@@ -7,7 +7,7 @@
     display: inline-block;
 }
 
-.profile-image.img {
+.profile-image img {
   height: 300px;
   width: 300px;
 }
