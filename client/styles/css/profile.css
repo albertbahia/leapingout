@@ -7,6 +7,11 @@
     display: inline-block;
 }
 
+.profile-image img {
+  height: 300px;
+  width: 300px;
+}
+
 .profile-section {
     margin-bottom: 15px;
 }
