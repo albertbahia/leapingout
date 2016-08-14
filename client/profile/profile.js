@@ -33,25 +33,6 @@ Template.editProfile.helpers({
 });
 
 Template.editProfile.events({
-    // 'change #file-input': function(e) {
-    //     var user = Meteor.user();
-    //     FS.Utility.eachFile(e, function(file) {
-    //         var newFile = new FS.File(file);
-    //
-    //         newFile.username = user.username;
-    //         newFile.userId = user._id;
-    //         console.log(newFile);
-    //         Images.insert(newFile, function(error, fileObj) {
-    //             if (error) {
-    //                 toastr.error("Upload failed... please try again.");
-    //             } else {
-    //                 toastr.success('Upload succeeded!');
-    //                 console.log(fileObj);
-    //                 console.log(Meteor.settings);
-    //             }
-    //         });
-    //     });
-    // }
     "click button.upload": function() {
       var files = $("input.file_bag")[0].files
 
@@ -70,12 +51,3 @@ Template.editProfile.events({
       })
     }
 });
-
-// Template.s3_tester.events({
-//
-// });
-//
-// Template.s3_tester.helpers({
-//
-// });
-// ----------------------------
