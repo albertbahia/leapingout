@@ -3,7 +3,7 @@ Template.home.created = function() {
 
   self.limit = new ReactiveVar;
   self.limit.set(parseInt(Meteor.settings.public.recordsPerPage));
-  
+
   Tracker.autorun(function() {
     Meteor.subscribe('images', self.limit.get());
   });
@@ -21,12 +21,13 @@ Template.home.rendered = function() {
 
 Template.home.helpers({
   'images': function() {
+    console.log(Images.find());
     return Images.find();
   }
 });
 
 var incrementLimit = function(templateInstance) {
-  var newLimit = templateInstance.limit.get() + 
+  var newLimit = templateInstance.limit.get() +
     parseInt(Meteor.settings.public.recordsPerPage);
   templateInstance.limit.set(newLimit);
 }

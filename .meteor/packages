@@ -17,7 +17,6 @@ accounts-base
 accounts-password
 cfs:standard-packages
 cfs:gridfs
-cfs:s3
 cfs:dropbox
 standard-minifiers
 meteor-base
@@ -44,3 +43,4 @@ highcharts-container
 maazalik:highcharts
 meteorhacks:search-source
 babel-compiler
+lepozepo:s3
