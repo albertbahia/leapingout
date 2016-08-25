@@ -3,6 +3,11 @@
 		<div class="venue-profile-content">
 			<h2>Edit Venue Profile</h2>
 		</div>
+		<div class="row">
+			<a href="{{pathFor 'venueProfile'}}">
+				<button type="button" class="btn btn-primary btn-block">Back to Venue Profile</button>
+			</a>
+		</div>
 	{{else}}
 		<h1>Please login to view this Venue's profile</h1>
 	{{/if}}
