@@ -1,17 +1,27 @@
-<template name="channelGuide">
-	<div class="col-lg-4">
-		<div id="hotspots-title">Most Popular Events</div>
-		{{#each findEvent}}
-		<div id="Box1" class="Top">
-			<span class="Text">{{eventName}}</span>
-			<a href="{{pathFor 'venueProfile'}}">{{eventVenueName}}</a>
+<template name="picky">
+	<form id="picky">
+		<div class="row">
+			<div class="col-xs-8">
+				<div class="form-group">
+					<input type="text" class="form-control datetimepicker" data-DateTimePicker name="DTPselect" placeholder="Pick Your Time">
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="form-group">
+					<button class="btn btn-success btn-block">Looky</button>
+				</div>
+			</div>
 		</div>
-		{{/each}}
-	</div>
-	<div class="col-lg-8 channel-guide">
-		<h1>Channel Guide</h1>
-		<div id ='chart'>
-		{{>barGuide}}
-	 </div>
-	</div>
+	</form>
+</template>
+
+<template name="kenTime">
+
+	<div id="mytimeline"></div>
+
+	{{#if Template.subscriptionsReady}}
+	<h1>Subscription Ready</h1> {{else}}
+	<div class="loading">{{>spinner}}</div>
+	<h1>Subscription NOT Ready</h1> {{/if}}
+
 </template>
