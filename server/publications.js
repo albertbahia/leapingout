@@ -16,7 +16,7 @@
 Meteor.publish('events', function(){
   // should be a function of Date, Time, location, Distance from location, Sort option (such as popularity, friends, or catagory of events...ex with kids)
 
-  Meteor._sleepForMs(5000);
+  Meteor._sleepForMs(1000);
 
   //var startTime = 1471204203087;
   //var endTime = 1472691666582;
