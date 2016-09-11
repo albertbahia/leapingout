@@ -7,10 +7,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+			<!-- NEXT STEP (8/25/16): ADD STYLING TO THE NAVBAR -->
 			<a class="navbar-brand" href="{{pathFor "landing"}}">Leaping Out</a>
         {{#if currentUser}}
           <a href="{{pathFor "profile"}}">Profile</a> |
-          <a href="{{pathFor "events"}}">Create Event</a>
+          <a href="{{pathFor "events"}}">Create Event</a> |
+	  <a href="{{pathFor "venues"}}">Add Venue</a>
         {{/if}}
 		</div>
 		<div class="collapse navbar-collapse" id="navigation">
