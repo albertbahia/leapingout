@@ -1,19 +1,19 @@
 <template name="hotspots">
 	<div class="hotspots">
-			{{> searchBox}}
+		{{> searchBox}}
 		<!-- Date Picker / Template -->
 		<!-- {{> datePicker }} -->
 
 		<!-- End Date Picker -->
 		<!-- Channel Guide Interface / Template -->
 		<div class="row" id="channel-guide-section">
-			{{> channelGuide }}
+			{{> picky}} {{> kenTime}}
 		</div>
 		<!-- End Channel Guide -->
 		<div class="row footer">
-				<button class="btn btn-primary col-lg-4 footer-button" id="about-button">About</button>
-				<button class="btn btn-info col-lg-4 footer-button" id="blog-button">Blog</button>
-				<button class="btn btn-success col-lg-4 footer-button" id="feedback-button">Feedback</button>
+			<button class="btn btn-primary col-lg-4 footer-button" id="about-button">About</button>
+			<button class="btn btn-info col-lg-4 footer-button" id="blog-button">Blog</button>
+			<button class="btn btn-success col-lg-4 footer-button" id="feedback-button">Feedback</button>
 		</div>
 	</div>
 </template>

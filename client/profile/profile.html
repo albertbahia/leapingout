@@ -1,50 +1,47 @@
 <template name="profile">
     {{#if currentUser}}
-        <div class="profile-content">
-            <h2>Profile Information</h2>
-            <div class="row profile-section">
-                <div class="profile-image col-md-4">
-				{{>home}}
-                
-                </div>
-                <div class="profile-info col-md-8">
-                    <div class="form-group">
-                        <label>Email:</label>
-                        <p>{{userEmail}}</p>
-                    </div>
-                    <div class="form-group">
-                        <label>First Name:</label>
-                        <p>{{userFirstName}}</p>
-                    </div>
-                    <div class="form-group">
-                        <label>Last Name:</label>
-                        <p>{{userLastName}}</p>
-                    </div>
-                    <div class="form-group">
-                        <label>Gender:</label>
-                        <p>Male</p>
-                    </div>
-                    <div class="form-group">
-                        <label>Age:</label>
-                        <p>31</p>
-                    </div>
-                    <div class="form-group">
-                        <label>State:</label>
-                        <p>NJ</p>
-                    </div>
-                    <div class="form-group">
-                        <label>Zip Code:</label>
-                        <p>07039</p>
-                    </div>
-                </div>
+    <div class="profile-content">
+        <h2>Profile Information</h2>
+        <div class="row profile-section">
+            <div class="profile-image col-md-4">
+                <img src="{{userProfileImage}}" alt="image" />
             </div>
-            <div class="row">
-                <a href="{{pathFor "editProfile"}}"><button type="button" class="btn btn-info btn-block editButton">Edit Profile</button></a>
+            <div class="profile-info col-md-8">
+                <div class="form-group">
+                    <label>Email:</label>
+                    <p>{{userEmail}}</p>
+                </div>
+                <div class="form-group">
+                    <label>First Name:</label>
+                    <p>{{userFirstName}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Last Name:</label>
+                    <p>{{userLastName}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <p>{{userGender}}</p>
+                </div>
+                <div class="form-group">
+                    <label>State:</label>
+                    <p>{{userState}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Zip Code:</label>
+                    <p>{{userZipCode}}</p>
+                </div>
             </div>
         </div>
+        <div class="row">
+            <a href="{{pathFor 'editProfile' }}">
+                <button type="button" class="btn btn-info btn-block editButton">Edit Profile</button>
+            </a>
+        </div>
+    </div>
     {{else}}
-        <div>
-            <h1>Please login to view your profile.</h1>
-        </div>
+    <div>
+        <h1>Please login to view your profile.</h1>
+    </div>
     {{/if}}
 </template>

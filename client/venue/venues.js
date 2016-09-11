@@ -15,7 +15,8 @@ Template.venues.events({
            venueCountry: formVenueData[0][5].value,
            venueEventId: "testVenueEventId",
            venueCreatorId: currentUserId,
-           venueCreatedAt: Date.now()
+           venueCreatedAt: Date.now(),
+	   venueProfileImageUrl: "/images/default-venue-profile-image.jpg"
        });
 
        //---Clear form input fields
