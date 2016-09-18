@@ -15,7 +15,10 @@ Template.profile.helpers({
     },
     userProfileImage: function() {
         return Meteor.user().profile.image_url
-    }
+    },
+		userGender: function() {
+			return Meteor.user().profile.userGender
+		}
 });
 // ------------------------------
 
