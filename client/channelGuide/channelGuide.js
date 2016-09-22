@@ -60,8 +60,9 @@ Template.picky.events({
 
 Template.kenTime.onRendered(function() {
 
-
-    var subscription = this.subscribe('events')
+    // ---------Events publication------------------
+    var eventsCollection = this.subscribe('events');
+    // ---------------------------------------------
     var container = document.getElementById('mytimeline');
     var groups = new vis.DataSet([{
         id: 1,
@@ -93,14 +94,14 @@ Template.kenTime.onRendered(function() {
 
 
     this.autorun(function() {
-        if (subscription.ready()) {
+        if (eventsCollection.ready()) {
             console.log("> Subscription Recived");
 
             var windowStart = moment(Session.get('picky')).valueOf();
             var windowEnd = moment(Session.get('picky')).add(7, 'days').valueOf();
 
             results = Events.find().fetch();
-
+            console.log(results);
             for (i = 0; i <= 4; i++) {
                 results[i]["group"] = i + 2;
                 results[i]["id"] = i + 2;

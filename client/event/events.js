@@ -15,7 +15,7 @@ Template.events.events({
 			eventVenueName: formEventData[0][3].value,
 			eventDuration: formEventData[0][4].value,
 			eventType: formEventData[0][5].value,
-			eventCalendarDate: formEventData[0][6].value,
+			eventStartDateAndTime: moment(formEventData[0][6].value),
 			eventCreatedAt: Date.now(), //---Current time
 			eventHostName: formEventData[0][7].value,
 			eventNumberMalesAttending: null,
