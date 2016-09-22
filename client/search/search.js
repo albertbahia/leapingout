@@ -6,4 +6,3 @@ var options = {
 var fields = ['eventName', 'summary'];
 
 EventSearch = new SearchSource('events', fields, options);
-
