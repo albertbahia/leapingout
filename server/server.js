@@ -25,6 +25,11 @@ Accounts.onCreateUser(function(options, user) {
   console.log(user);
   user.profile = options.profile;
   user.profile.image_url = "http://www.essetinoconnexions.com/wp-content/uploads/2015/08/default.jpg";
+  user.profile.userZipCode = "";
+  user.profile.userCity = "";
+  user.profile.userState = "";
+  user.profile.userProfileType  = "";
+  user.profile.userStreetAddress = "";
   // user.profile.image =
   return user;
 });
