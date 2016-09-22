@@ -35,7 +35,7 @@ Accounts.onCreateUser(function(options, user) {
 });
 
 S3.config = {
-  key: "AKIAJB2YQKVYF2HSMZSQ",
-  secret: "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",
-  bucket: "leapingout"
+  key: process.env.S3_KEY,
+  secret: process.env.S3_SECRET,
+  bucket: process.env.S3_BUCKET
 }
