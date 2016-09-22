@@ -1,7 +1,6 @@
-
-// process.env.MAIL_URL = "smtp://pigeonplan@gmail.com:g3VbS2Hx9H-aHx-2pZaT_A@smtp.mandrillapp.com:587/";
-
-//process.env.MAIL_URL = "smtp://mmc228@gmail.com:nCQFyqPblIKKucd1by72JQ@smtp.mandrillapp.com:587/";
+// ---Require depedencies----
+import s3Creds from '../s3Creds';
+// --------------------------
 
 Accounts.emailTemplates.verifyEmail = {
    subject: function(user) {
@@ -35,7 +34,7 @@ Accounts.onCreateUser(function(options, user) {
 });
 
 S3.config = {
-  key: process.env.S3_KEY,
-  secret: process.env.S3_SECRET,
-  bucket: process.env.S3_BUCKET
+  key: process.env.S3_KEY || s3Creds.key,
+  secret: process.env.S3_SECRET || s3Creds.secret,
+  bucket: process.env.S3_BUCKET || s3Creds.bucket
 }
