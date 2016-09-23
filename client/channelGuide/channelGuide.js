@@ -64,6 +64,7 @@ Template.kenTime.onRendered(function() {
     var eventsCollection = this.subscribe('events');
     // ---------------------------------------------
     var container = document.getElementById('mytimeline');
+    console.log(eventsCollection[0]);
     var groups = new vis.DataSet([{
         id: 1,
         content: 'Sponsered Event'
