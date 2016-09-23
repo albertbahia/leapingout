@@ -1,4 +1,4 @@
 .DS_Store
 ./settings.json
 node_modules
-./s3creds.js
+./s3Creds.js
