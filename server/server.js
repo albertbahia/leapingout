@@ -1,5 +1,5 @@
 // ---Require depedencies----
-import s3Creds from '../s3Creds';
+//import s3Creds from '../s3Creds';
 // --------------------------
 
 Accounts.emailTemplates.verifyEmail = {
@@ -33,8 +33,17 @@ Accounts.onCreateUser(function(options, user) {
   return user;
 });
 
-S3.config = {
-  key: process.env.S3_KEY || s3Creds.key,
-  secret: process.env.S3_SECRET || s3Creds.secret,
-  bucket: process.env.S3_BUCKET || s3Creds.bucket
+if (process.env.NODE_ENV === 'development') {
+	S3.config = {
+		key: Meteor.settings.S3_KEY,
+		secret: Meteor.settings.S3_SECRET,
+		bucket: Meteor.settings.S3_BUCKET
+	}
+} else if (process.env.NODE_ENV === 'production') {
+	S3.config = {
+		key: process.env.S3_KEY,
+		secret: process.env.S3_SECRET,
+		bucket: process.env.S3_BUCKET
+	}
 }
+
