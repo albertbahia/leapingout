@@ -1,4 +1,4 @@
-Template.events.events({
+Template.createEvent.events({
 	"click #create-event" : function(event) {
 		event.preventDefault();
 
