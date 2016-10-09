@@ -1,4 +1,4 @@
-Template.venues.events({
+Template.createVenue.events({
    "click #create-venue" : function(event) {
        event.preventDefault();
 

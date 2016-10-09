@@ -1,10 +1,6 @@
-// ------Ken's code for vis channel Guide
-
-
 import { Template } from 'meteor/templating';
 
 import { ReactiveVar} from 'meteor/reactive-var';
-//
 // import './channelGuide.html'
 
 import vis from 'vis';
@@ -42,24 +38,24 @@ Template.picky.events({
 
 
 Template.kenTime.onRendered(function() {
-  // ---------Events publication------------------
-  var eventsCollection = this.subscribe('events');
+  // ---------Venues publication------------------
+  var venuesCollection = this.subscribe('venues');
   // ---------------------------------------------
 
   this.autorun(function() {
-    if (eventsCollection.ready()) {
+    if (venuesCollection.ready()) {
       console.log("> Subscription Recived");
-      let events = Events.find().fetch();
+      let venues = Venues.find().fetch();
 
-      console.log(events[0]);
+      console.log(venues[0]);
 
       let container = document.getElementById('mytimeline');
 
-      let eventLinkOne = "<a href='/eventFlyer/" + events[0]._id + "'>" + events[0].eventName + "</a>",
-          eventLinkTwo = "<a href='/eventFlyer/" + events[1]._id + "'>" + events[1].eventName + "</a>",
-          eventLinkThree = "<a href='/eventFlyer/" + events[2]._id + "'>" + events[2].eventName + "</a>",
-          eventLinkFour = "<a href='/eventFlyer/" + events[3]._id + "'>" + events[3].eventName + "</a>",
-          eventLinkFive = "<a href='/eventFlyer/" + events[4]._id + "'>" + events[4].eventName + "</a>";
+      let venueLinkOne = "<a href='/venue/" + venues[0]._id + "'>" + venues[0].venueName + "</a>",
+          venueLinkTwo = "<a href='/venue/" + venues[1]._id + "'>" + venues[1].venueName + "</a>",
+          venueLinkThree = "<a href='/venue/" + venues[2]._id + "'>" + venues[2].venueName + "</a>",
+          venueLinkFour = "<a href='/venue/" + venues[3]._id + "'>" + venues[3].venueName + "</a>",
+          venueLinkFive = "<a href='/venue/" + venues[4]._id + "'>" + venues[4].venueName + "</a>";
 
 
       var groups = new vis.DataSet([{
@@ -67,19 +63,19 @@ Template.kenTime.onRendered(function() {
           content: 'Sponsored Event'
       }, {
           id: 2,
-          content: eventLinkOne
+          content: venueLinkOne
       }, {
           id: 3,
-          content: eventLinkTwo
+          content: venueLinkTwo
       }, {
           id: 4,
-          content: eventLinkThree
+          content: venueLinkThree
       }, {
           id: 5,
-          content: eventLinkFour
+          content: venueLinkFour
       }, {
           id: 6,
-          content: eventLinkFive
+          content: venueLinkFive
       }]);
 
       var options = {
@@ -124,12 +120,6 @@ Template.kenTime.onRendered(function() {
         //     end: moment(new Date()) + 180 * 1000,
         //     content: 'Dynamic event 3',
         //     group: "3"
-        //   },
-        //   {
-        //     id: 4,
-        //     start: moment(new Date()) + 60 * 1000,
-        //     end: moment(new Date()) + 180 * 1000,
-        //     content: 'Dynamic event 4',
         //     group: "4"
         //   },
         //   {
@@ -247,6 +237,12 @@ Template.kenTime.onRendered(function() {
 //     {id: 1, content: 'Sponsered Event'},
 //     {id: 2, content: 'Event 1'},
 //     {id: 3, content: 'Event 2'},
+//     {id: 4, content: 'Event 3'},
+//     {id: 5, content: 'Event 4'},
+//     {id: 4, content: 'Event 3'},
+//     {id: 5, content: 'Event 4'},
+//     {id: 6, content: 'Event 5'}
+//   ]);
 //     {id: 4, content: 'Event 3'},
 //     {id: 5, content: 'Event 4'},
 //     {id: 6, content: 'Event 5'}
