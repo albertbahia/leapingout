@@ -1,18 +1,3 @@
-// Meteor.publish("images", function(limit) {
-//   check(limit, Number);
-//
-//   return Images.find({}, {
-//    /*  limit: limit
-// 	sort: {uploadedAt:-1} */
-//   });
-// });
-
-
-// ----Events publication for Channel Guide-----
-// Meteor.publish("events", function() {
-// 	return Events.find({}, {sort: {eventNumberInAttendance:-1}, limit:5});
-// });
-
 Meteor.publish('events', function(){
   // should be a function of Date, Time, location, Distance from location, Sort option (such as popularity, friends, or catagory of events...ex with kids)
 
