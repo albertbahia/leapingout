@@ -10,13 +10,14 @@ Template.createVenue.events({
 					 venueStreetAddress: formVenueData[0][1].value,
 					 venueCity: formVenueData[0][2].value,
 					 venueState: formVenueData[0][3].value,
-					 venueCountry: formVenueData[0][5].value,
-					 venueCreatorId: currentUserId,
+					 venueCountry: formVenueData[0][5].value
 				 };
 
-		 Meteor.call("createVenue", venueData, function(err, res) {
-			 if (err) {
-			 	console.log(err);
+		 Meteor.call("createVenue", { 
+				 venueData: venueData
+			 }, function(err, res) {
+				 if (err) {
+					console.log(err);
 			 } else {
 				 console.log("venue sent succesfully");
 			 }
