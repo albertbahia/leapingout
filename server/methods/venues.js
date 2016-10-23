@@ -1,24 +1,25 @@
 Meteor.methods({
 	createVenue: function(venue) {
-			
-		let currentUser = Meteor.user();	
+
+		let currentUser = Meteor.user();
 
 		check(venue, Object);
 		check(currentUser, Object);
 
-		//console.log("server method for creating venue");		
+		// console.log(venue.venueData);
+		//console.log("server method for creating venue");
 
 		//-Save venue data to MongoDB here-
 		Venues.insert({
-			venueName: venue.venueName,
-			venueStreetAddress: venue.venueStreetAddress,
-			venueCity: venue.venueCity,
-			venueState: venue.venueState,
+			venueName: venue.venueData.venueName,
+			venueStreetAddress: venue.venueData.venueStreetAddress,
+			venueCity: venue.venueData.venueCity,
+			venueState: venue.venueData.venueState,
 			venueLatLong: [],
 			venuePopularityRating: 0,
-			venueCountry: venue.venueCountry,
+			venueCountry: venue.venueData.venueCountry,
 			venueEventIds: [],
-			venueCreatorId: currentUser, 
+			venueCreatorId: currentUser,
 			venueCreatedAt: Date.now(),
 			venueProfileImageUrl: "/images/default-venue-profile-image.jpg"
 		});
