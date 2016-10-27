@@ -19,6 +19,17 @@
 			<label for="eventVenueNameInput">Event Venue Name:</label>
 			<input type="text" class="form-control" id="eventVenueNameInput" name="eventVenueName" placeholder="Type Venue Name">
 		</div>
+		<div class="dropdown">
+		  <button class="btn btn-default dropdown-toggle" type="button" id="eventVenueNameDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		    Venue Name
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		    <li><a href="#">Action</a></li>
+		    <li><a href="#">Another action</a></li>
+		    <li><a href="#">{{ getVenues }}</a></li>
+		  </ul>
+		</div>
 		<div class="form-group">
 			<label for="eventTypeInput">Event Type:</label>
 			<input type="text" class="form-control" id="eventTypeInput" name="eventType">

@@ -20,7 +20,7 @@ Template.createEvent.events({
 		};
 
 		Meteor.call("createEvent", {
-				eventData: eventData		
+				eventData: eventData
 			}, function(err, res) {
 			if (err) {
 				console.log(err);
@@ -36,5 +36,21 @@ Template.createEvent.events({
 
 		// ---Prevent default form submit
 		return false;
+	}
+});
+
+Template.createEvent.helpers({
+	getVenues: function() {
+		Meteor.call("getVenues", function(err, res) {
+			if (err) {
+				console.log(err);
+			} else {
+				console.log("getVenues call success!");
+				console.log(res);
+				Session.set("data", res)
+			}
+		});
+
+		return Session.get("data");
 	}
 });
