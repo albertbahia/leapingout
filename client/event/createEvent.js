@@ -46,7 +46,7 @@ Template.createEvent.helpers({
 				console.log(err);
 			} else {
 				console.log("getVenues call success!");
-				console.log(res);
+				// console.log(res);
 				Session.set("data", res)
 			}
 		});

@@ -27,7 +27,11 @@
 		  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 		    <li><a href="#">Action</a></li>
 		    <li><a href="#">Another action</a></li>
-		    <li><a href="#">{{ getVenues }}</a></li>
+				{{#if Template.subscriptionsReady }}
+					{{#each getVenues}}
+				    <li><a href="#">{{ this }}</a></li>
+					{{/each}}
+				{{/if}}
 		  </ul>
 		</div>
 		<div class="form-group">
