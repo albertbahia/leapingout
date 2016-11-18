@@ -17,6 +17,7 @@ Meteor.methods({
 			eventNumberInAttendance: 0,
 			eventPrice: event.eventData.eventPrice,
 			eventVenueName: event.eventData.eventVenueName,
+			eventVenueId: event.eventData.eventVenueId,
 			eventType: event.eventData.eventType,
 			eventStartTime: event.eventData.eventStartTime,
 			eventEndTime: event.eventData.eventEndTime,
@@ -41,8 +42,13 @@ Meteor.methods({
 		console.log("=========================");
 		console.log("Venue Selected:");
 		console.log("=========================");
-		console.log(Events.findOne({"_id": eventId}));
+		Venues.update({ "_id": event.eventData.eventVenueId },{ $push: { venueEventIds: eventId } });
+		console.log(Venues.findOne({"_id": event.eventData.eventVenueId}));
 		console.log("=========================");
+
+		// Get venue id from form
+		// Search venues collection in mongodb for specific venue using id value from form
+		// Update/push created event's id to venue field venueEventId's
 
 		return "hello world!";
 	},
@@ -61,7 +67,7 @@ Meteor.methods({
 		// console.log(venues);
 
 		for (let i = 0; i < venues.length; i++) {
-			venuesArray.push(venues[i].venueName);
+			venuesArray.push({venueId: venues[i]._id, venueName: venues[i].venueName});
 		}
 
 		return venuesArray;
