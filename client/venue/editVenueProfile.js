@@ -22,7 +22,6 @@ Template.editVenueProfile.events({
       }
     );
 
-
     return false;
   }
 })

@@ -21,6 +21,7 @@ Meteor.methods({
 			venueEventIds: [],
 			venueCreatorId: currentUser,
 			venueCreatedAt: Date.now(),
+			venueUpdatedAt: Date.now(),
 			venueProfileImageUrl: "/images/default-venue-profile-image.jpg"
 		});
 
@@ -28,12 +29,23 @@ Meteor.methods({
 	},
 	updateVenue: function(venue) {
 
+		console.log("-------------------------");
+		console.log("updateVenue server method");
+		console.log("-------------------------");
+
 		let currentUser = Meteor.user();
 
 		check(venue, Object);
 		check(currentUser, Object);
 
 		console.log(venue);
+
+		Venues.update(venue.venueData.venueId, {
+			$set: {
+				venueName: venue.venueData.venueName,
+				venueUpdatedAt: Date.now()
+			}
+		});
 
 		return;
 	}
