@@ -11,7 +11,11 @@
 					<input type="text" name="venueName" class="form-control" id="venueNameInput" value={{venueName}} />
 				</div>
 			</form>
-			<img src="http://northjerseymusic.com/photos/venues/venue-304.jpg" alt="image-grasshopper" class="venue-profile-image" />
+			<div>
+				<img class="venue-profile-img"  src="{{venueProfileImageUrl}}" alt="image" />
+				<input type="file" class="file_bag">
+				<button class="btn btn-default upload">Upload</button>
+			</div>
 		</div>
 		<div class="row">
 			<button type="button" class="btn btn-default" id="venue-update-button">Update Venue</button>

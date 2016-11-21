@@ -43,6 +43,7 @@ Meteor.methods({
 		Venues.update(venue.venueData.venueId, {
 			$set: {
 				venueName: venue.venueData.venueName,
+				venueProfileImageUrl: venue.venueData.venueProfileImageUrl,
 				venueUpdatedAt: Date.now()
 			}
 		});
