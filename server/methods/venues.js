@@ -25,5 +25,16 @@ Meteor.methods({
 		});
 
 		return;
+	},
+	updateVenue: function(venue) {
+
+		let currentUser = Meteor.user();
+
+		check(venue, Object);
+		check(currentUser, Object);
+
+		console.log(venue);
+
+		return;
 	}
 });

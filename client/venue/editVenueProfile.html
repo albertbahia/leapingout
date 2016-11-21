@@ -2,11 +2,20 @@
 	{{# if currentUser}}
 		<div class="venue-profile-content">
 			<h2>Edit Venue Profile</h2>
+			<form class="venue-info-section venue-form">
+				<div class="form-group hide">
+					<input value={{_id}} />
+				</div>
+				<div class="form-group">
+					<label for="venueNameInput">Venue Name:</label>
+					<input type="text" name="venueName" class="form-control" id="venueNameInput" value={{venueName}} />
+				</div>
+			</form>
+			<img src="http://northjerseymusic.com/photos/venues/venue-304.jpg" alt="image-grasshopper" class="venue-profile-image" />
 		</div>
-		<div class="venue-info-section">
-				<div class="venue-name-section">Venue Name:<span id="venue-name">{{venueName}}</span></div>
+		<div class="row">
+			<button type="button" class="btn btn-default" id="venue-update-button">Update Venue</button>
 		</div>
-		<img src="http://northjerseymusic.com/photos/venues/venue-304.jpg" alt="image-grasshopper" class="venue-profile-image" />
 		<div class="row">
 			<a href="/venues/{{_id}}">
 				<button type="button" class="btn btn-primary btn-block">Back to Venue Profile</button>
