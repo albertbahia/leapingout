@@ -51,11 +51,11 @@ Template.kenTime.onRendered(function() {
 
       let container = document.getElementById('mytimeline');
 
-      let venueLinkOne = "<a href='/venue/" + venues[0]._id + "'>" + venues[0].venueName + "</a>",
-          venueLinkTwo = "<a href='/venue/" + venues[1]._id + "'>" + venues[1].venueName + "</a>",
-          venueLinkThree = "<a href='/venue/" + venues[2]._id + "'>" + venues[2].venueName + "</a>",
-          venueLinkFour = "<a href='/venue/" + venues[3]._id + "'>" + venues[3].venueName + "</a>",
-          venueLinkFive = "<a href='/venue/" + venues[4]._id + "'>" + venues[4].venueName + "</a>";
+      let venueLinkOne = "<a href='/venues/" + venues[0]._id + "'>" + venues[0].venueName + "</a>",
+          venueLinkTwo = "<a href='/venues/" + venues[1]._id + "'>" + venues[1].venueName + "</a>",
+          venueLinkThree = "<a href='/venues/" + venues[2]._id + "'>" + venues[2].venueName + "</a>",
+          venueLinkFour = "<a href='/venues/" + venues[3]._id + "'>" + venues[3].venueName + "</a>",
+          venueLinkFive = "<a href='/venues/" + venues[4]._id + "'>" + venues[4].venueName + "</a>";
 
 
       var groups = new vis.DataSet([{

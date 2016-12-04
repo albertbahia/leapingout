@@ -1,5 +1,4 @@
 <template name="createEvent">
-
 	<div class="header">
 		<h1>Create an Event</h1>
 	</div>
@@ -18,19 +17,25 @@
 		</div>
 		<div class="form-group">
 			<label for="eventVenueNameInput">Event Venue Name:</label>
-			<input type="text" class="form-control" id="eventVenueNameInput" name="eventVenueName" placeholder="Type Venue Name">
-		</div>
-		<div class="form-group">
-			<label for="eventDurationInput">Event Duration:</label>
-			<input type="text" class="form-control" id="eventDurationInput" name="eventDuration">
+			<select id="venueName">
+				{{#if Template.subscriptionsReady }}
+				{{#each getVenues}}
+				<option value={{this.venueId}}>{{ this.venueName }}</option>
+				{{/each}}
+				{{/if}}
+			</select>
 		</div>
 		<div class="form-group">
 			<label for="eventTypeInput">Event Type:</label>
 			<input type="text" class="form-control" id="eventTypeInput" name="eventType">
 		</div>
 		<div class="form-group">
-			<label for="eventCalendarDateInput">Event Start:</label>
-			<input type="datetime-local" class="form-control" id="eventCalendarDateInput" name="eventStartDateAndTime">
+			<label for="eventCalendarStartDateInput">Event Start:</label>
+			<input type="datetime-local" class="form-control" id="eventCalendarStartDateInput" name="eventStartTime">
+		</div>
+		<div class="form-group">
+			<label for="eventCalendarEndDateInput">Event End:</label>
+			<input type="datetime-local" class="form-control" id="eventCalendarEndDateInput" name="eventEndTime">
 		</div>
 		<div class="form-group">
 			<label for="eventHostNameInput">Event Host Name:</label>
