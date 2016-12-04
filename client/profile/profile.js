@@ -19,7 +19,27 @@ Template.profile.helpers({
 		userGender: function() {
 			return Meteor.user().profile.userGender
 		}
+
 });
+
+Template.profile.events({
+
+"click button.delete": function() {
+
+console.log(Meteor.user());
+
+
+
+
+Meteor.users.remove(this._id);
+
+
+
+}
+
+
+
+})
 // ------------------------------
 
 // ---------Edit Profile---------
