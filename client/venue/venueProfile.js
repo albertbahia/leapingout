@@ -7,3 +7,30 @@ Template.venueProfile.helpers({
     return Venues.find({});
   }
 });
+
+Template.venueProfile.events ({
+
+	"click button.delete": function() {
+
+		
+
+	
+
+		var selectedId  = Session.get('selectedId');
+		//let venueId = this.params._id;
+
+		console.log(selectedId);
+
+		console.log( Session.get('selectedId'));
+
+
+		Venues.remove({_id: selectedId});
+
+		//Venues.remove('nWyAnX35rPhMYhuej');
+
+	}
+
+
+
+
+});
