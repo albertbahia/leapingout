@@ -78,10 +78,7 @@ less@2.7.8
 livedata@1.0.18
 localstorage@1.0.12
 logging@1.1.16
-<<<<<<< HEAD
-=======
 mdg:validation-error@0.5.1
->>>>>>> 221c86306188b01022cb44c6b92fbe6b39232fb0
 meteor@1.6.0
 meteor-base@1.0.4
 meteorhacks:picker@1.0.3
