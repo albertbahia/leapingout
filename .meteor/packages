@@ -48,3 +48,4 @@ ecmascript@0.6.1
 momentjs:moment
 sacha:spin
 tsega:bootstrap3-datetimepicker
+aldeed:collection2
