@@ -3,11 +3,13 @@ Template.createEvent.events({
 		event.preventDefault();
 
 		var formEventData = document.getElementsByClassName("new-event");
+		// console.log($('select#venueName option:selected').text());
 		var eventData = {
 			eventName: formEventData[0][0].value,
 			eventStreetAddress: formEventData[0][1].value,
 			eventPrice: formEventData[0][2].value,
-			eventVenueName: formEventData[0][3].value,
+			eventVenueName: $('select#venueName option:selected').text(),
+			eventVenueId: formEventData[0][3].value,
 			eventType: formEventData[0][4].value,
 			eventStartTime: formEventData[0][5].value,
 			eventEndTime: formEventData[0][6].value,
