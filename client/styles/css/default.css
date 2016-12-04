@@ -412,3 +412,7 @@ small
 		}
 
 }
+
+.hide {
+	visiblity: hidden;
+}

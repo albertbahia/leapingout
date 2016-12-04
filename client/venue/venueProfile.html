@@ -3,8 +3,10 @@
     <div class="venue-info-section">
         <div class="venue-name-section">Venue Name:<span id="venue-name">{{venueName}}</span></div>
     </div>
-    <img src="http://northjerseymusic.com/photos/venues/venue-304.jpg" alt="image-grasshopper" class="venue-profile-image" />
+    <div class="venue-profile-img">
+      <img src="{{venueProfileImageUrl}}" />
+    </div>
     <div class="row">
-        <a href="{{pathFor 'editVenueProfile'}}">Edit Venue</a>
+        <a href="/venues/{{_id}}/edit">Edit Venue</a>
     </div>
 </template>

@@ -2,9 +2,26 @@
 	{{# if currentUser}}
 		<div class="venue-profile-content">
 			<h2>Edit Venue Profile</h2>
+			<form class="venue-info-section venue-form">
+				<div class="form-group hide">
+					<input value={{_id}} />
+				</div>
+				<div class="form-group">
+					<label for="venueNameInput">Venue Name:</label>
+					<input type="text" name="venueName" class="form-control" id="venueNameInput" value={{venueName}} />
+				</div>
+			</form>
+			<div>
+				<img class="venue-profile-img"  src="{{venueProfileImageUrl}}" alt="image" />
+				<input type="file" class="file_bag">
+				<button class="btn btn-default upload">Upload</button>
+			</div>
 		</div>
 		<div class="row">
-			<a href="{{pathFor 'venueProfile'}}">
+			<button type="button" class="btn btn-default" id="venue-update-button">Update Venue</button>
+		</div>
+		<div class="row">
+			<a href="/venues/{{_id}}">
 				<button type="button" class="btn btn-primary btn-block">Back to Venue Profile</button>
 			</a>
 		</div>
