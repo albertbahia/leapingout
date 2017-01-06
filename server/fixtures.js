@@ -23,12 +23,82 @@ if (Meteor.users.find({}).count() === 0){
 		})
 }
 
+
+// =====================================================================
+
+if (Venues.find({}).count() === 0) {
+
+	var now = Date.now();
+
+	_.times(5000,function(){
+			 const companyName = company.companyName();
+
+			 const streetAddress = address.streetAddress();
+			 const streetName = address.streetName();
+			 const city = address.city();
+			 const stateAbbr = address.stateAbbr();
+			 const zipCode = address.zipCode();
+			 const latitude = address.latitude();
+			 const longitude = address.longitude();
+
+			 const words = lorem.words();
+			 const paragraph = lorem.paragraph();
+
+			 Venues.insert({
+				 venueName: companyName,
+
+				 venueStreetAddress: streetAddress,
+				 venueStreetName: streetName,
+				 venueCity: city,
+				 venueStateAbbr: stateAbbr,
+				 venueZipCode: zipCode,
+
+				 venueLat: latitude,
+				 venueLon: longitude,
+
+				 venuePopularityRating: 7,
+		 		 venueCountry: "testVenueCountry1",
+				 venueEventId: "testVenueEventId1",
+				 venueCreatorId: "testCreatorId1",
+				 venueCreatedAt: now
+			 })
+	});
+}
+// 	Venues.insert({
+// 		venueName: "testVenueName1",
+// 		venueStreetAddress: "testVenueStreetAddress1",
+// 		venueCity: "testVenueCity1",
+// 		venueState: "testVenueState1",
+// 		venueLatLong: "testVenueLatLong1",
+//
+// 		venuePopularityRating: 7,
+// 		venueCountry: "testVenueCountry1",
+// 		venueEventId: "testVenueEventId1",
+// 		venueCreatorId: "testCreatorId1",
+// 		venueCreatedAt: now
+// 	})
+//
+// 	Venues.insert({
+// 		venueName: "testVenueName1",
+// 		venueStreetAddress: "testVenueStreetAddress1",
+// 		venueCity: "testVenueCity1",
+// 		venueState: "testVenueState1",
+// 		venueLatLong: "testVenueLatLong1",
+// 		venuePopularityRating: 7,
+// 		venueCountry: "testVenueCountry1",
+// 		venueEventId: "testVenueEventId1",
+// 		venueCreatorId: "testCreatorId1",
+// 		venueCreatedAt: now
+// 	})
+// }
+
+
 if (Events.find({}).count() === 0) {
 
 	var now = Date.now();
 
 	 _.times(5000,function(){
-	 			const companyName = company.companyName();
+	 			//const companyName = company.companyName();
 
 				const streetAddress = address.streetAddress();
 				const streetName = address.streetName();
@@ -41,9 +111,16 @@ if (Events.find({}).count() === 0) {
 				const words = lorem.words();
 				const paragraph = lorem.paragraph();
 
+			//	var r = Math.floor(Math.random() * 5000);
+			//	var randomUser = Meteor.users.find().limit(1).skip(r);
+
+				// var r = Math.floor(Math.random() * 5000);
+				// var randomVenue = Venues.find({},{ limit(1) , skip(r) });
+
 	 			Events.insert({
 					eventName: words,
-					eventVenueName: companyName,
+					eventVenueName: randomeVenue.companyName,
+					eventVenueId: randomeVenue._id,
 					eventStreetAddress: streetAddress,
 					eventStreetName: streetName,
 					eventCity: city,
@@ -55,7 +132,7 @@ if (Events.find({}).count() === 0) {
 					eventEndDate: "May 05",
 					eventStartTime: "1:00pm",
 					eventEndTime: "4:00pm",
-					createdUser: "Kenny Kwok",
+					createdUser: randomUser,
 					eventDateCreated: now,
 					summary: paragraph,
 					eventNumberInAttendance: 5
@@ -202,76 +279,5 @@ if (Events.find({}).count() === 0) {
 	// 	eventNumberInAttendance: 50
 	// })
 }
-
-
-
-// =====================================================================
-
-
-	if (Venues.find({}).count() === 0) {
-
-	var now = Date.now();
-
-	_.times(5000,function(){
-			 const companyName = company.companyName();
-
-			 const streetAddress = address.streetAddress();
-			 const streetName = address.streetName();
-			 const city = address.city();
-			 const stateAbbr = address.stateAbbr();
-			 const zipCode = address.zipCode();
-			 const latitude = address.latitude();
-			 const longitude = address.longitude();
-
-			 const words = lorem.words();
-			 const paragraph = lorem.paragraph();
-
-			 Venues.insert({
-				 venueName: companyName,
-
-				 venueStreetAddress: streetAddress,
-				 venueStreetName: streetName,
-				 venueCity: city,
-				 venueStateAbbr: stateAbbr,
-				 venueZipCode: zipCode,
-
-				 venueLat: latitude,
-				 venueLon: longitude,
-
-				 venuePopularityRating: 7,
-		 		 venueCountry: "testVenueCountry1",
-				 venueEventId: "testVenueEventId1",
-				 venueCreatorId: "testCreatorId1",
-				 venueCreatedAt: now
-			 })
-	});
-}
-// 	Venues.insert({
-// 		venueName: "testVenueName1",
-// 		venueStreetAddress: "testVenueStreetAddress1",
-// 		venueCity: "testVenueCity1",
-// 		venueState: "testVenueState1",
-// 		venueLatLong: "testVenueLatLong1",
-//
-// 		venuePopularityRating: 7,
-// 		venueCountry: "testVenueCountry1",
-// 		venueEventId: "testVenueEventId1",
-// 		venueCreatorId: "testCreatorId1",
-// 		venueCreatedAt: now
-// 	})
-//
-// 	Venues.insert({
-// 		venueName: "testVenueName1",
-// 		venueStreetAddress: "testVenueStreetAddress1",
-// 		venueCity: "testVenueCity1",
-// 		venueState: "testVenueState1",
-// 		venueLatLong: "testVenueLatLong1",
-// 		venuePopularityRating: 7,
-// 		venueCountry: "testVenueCountry1",
-// 		venueEventId: "testVenueEventId1",
-// 		venueCreatorId: "testCreatorId1",
-// 		venueCreatedAt: now
-// 	})
-// }
 
 });
