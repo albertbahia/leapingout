@@ -1,6 +1,7 @@
- 
-Meteor.subscribe("events");
-Meteor.subscribe("venues");
+
+//Meteor.subscribe("events");
+//Meteor.subscribe("venues");
+//Meteor.subscribe('eventFlyer', this.params._id);
 
  Template.eventFlyer.events({
 
@@ -14,15 +15,9 @@ var eventId  = Session.get('eventId');
 
 		console.log( Session.get('eventId'));
 
-
 		Events.remove({_id: eventId});
-
-
-
-
-
 
 }
 
-	
+
 })

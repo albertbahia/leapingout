@@ -49,5 +49,26 @@ Meteor.methods({
 		});
 
 		return;
+	},
+
+	getVenues: function() {
+
+		let currentUser = Meteor.user(),
+				venuesArray = [];
+
+		check(currentUser, Object);
+
+		console.log("getVenues server method");
+		console.log("=========================");
+
+		// console.log(Venues.find());
+		let venues = Venues.find().fetch();
+		// console.log(venues);
+
+		for (let i = 0; i < venues.length; i++) {
+			venuesArray.push({venueId: venues[i]._id, venueName: venues[i].venueName});
+		}
+
+		return venuesArray;
 	}
 });
