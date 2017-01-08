@@ -1,0 +1,11 @@
+<template name="eventFlyer">
+    <h1>Hello World eventFlyer</h1> 
+		<div>	{{eventName}} </div> 
+		<div> {{eventVenueName}} </div> 
+		<div> {{eventStreetAddress}} </div> 
+
+
+	<a href ="/eventFlyer/{{_id}}/edit">	<button  type="button"  id ="edit-event-button">Edit Event
+	</button> </a>
+		<button type="button" class="btn btn-info btn-block delete" id="delete-event-button">Delete Event</button>
+</template>

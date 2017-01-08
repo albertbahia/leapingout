@@ -42,7 +42,21 @@ Accounts.ui.config({
       checked: 'checked'
     }],
     visible: true
-  }, {
+  },
+  {
+    fieldName: 'userZipCode',
+    fieldLabel: 'Zip Code',
+    inputType: 'text',
+    visible: true,
+    validate: function(value, errorFunction) {
+      if (!value) {
+        errorFunction('Please enter a zip code.');
+      } else {
+        return true;
+      }
+    }
+  },
+  {
     fieldName: 'userTerms',
     fieldLabel: 'I accept the terms and conditions',
     inputType: 'checkbox',

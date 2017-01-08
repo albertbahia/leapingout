@@ -1,4 +1,4 @@
-<template name="venues">
+<template name="createVenue">
     {{#if currentUser}}
     <div class="header">
         <h1>Create a Venue</h1>
@@ -19,10 +19,6 @@
         <div class="form-group">
             <label for="venueStateInput">Venue State:</label>
             <input type="text" class="form-control" id="venueStateInput" name="venueState" placeholder="Type Venue State">
-        </div>
-        <div class="form-group">
-            <label for="venueLatLongInput">Venue Latitude/Longitude</label>
-            <input type="text" class="form-control" id="venueLatLongInput" name="venueLatLong" placeholder="Type Venue Latitude/Longitude">
         </div>
         <div class="form-group">
             <label for="venueCountryInput">Venue Country:</label>

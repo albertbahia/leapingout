@@ -1,0 +1,67 @@
+<template name="createEvent">
+	<div class="header">
+		<h1>Create an Event</h1>
+	</div>
+	<form class="new-event">
+		<div class="form-group">
+			<label for="eventNameInput">Event Name:</label>
+			<input type="text" class="form-control" id="eventNameInput" name="eventName" placeholder="Type Event Name">
+		</div>
+		<div class="form-group">
+			<label for="eventStreetAddressInput">Event Street Address:</label>
+			<input type="text" class="form-control" id="eventStreetAddressInput" name="eventStreetAddress" placeholder="Type Street Address">
+		</div>
+		<div class="form-group">
+			<label for="eventPriceInput">Event Price:</label>
+			<input type="text" class="form-control" id="eventPriceInput" name="eventPrice" placeholder="Enter Price">
+		</div>
+		<div class="form-group">
+			<label for="eventVenueNameInput">Event Venue Name:</label>
+			<select id="venueName">
+				{{#if Template.subscriptionsReady }}
+				{{#each getVenues}}
+				<option value={{this.venueId}}>{{ this.venueName }}</option>
+				{{/each}}
+				{{/if}}
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="eventTypeInput">Event Type:</label>
+			<input type="text" class="form-control" id="eventTypeInput" name="eventType">
+		</div>
+		<div class="form-group">
+			<label for="eventCalendarStartDateInput">Event Start:</label>
+			<input type="datetime-local" class="form-control" id="eventCalendarStartDateInput" name="eventStartTime">
+		</div>
+		<div class="form-group">
+			<label for="eventCalendarEndDateInput">Event End:</label>
+			<input type="datetime-local" class="form-control" id="eventCalendarEndDateInput" name="eventEndTime">
+		</div>
+		<div class="form-group">
+			<label for="eventHostNameInput">Event Host Name:</label>
+			<input type="text" class="form-control" id="eventHostNameInput" name="eventHostName" placeholder="Type Host Name">
+
+		</div>
+		<div class="form-group">
+			<label for="eventCreatorInput">Event Creator:</label>
+			<p>{{ currentUser.username }}</p>
+		</div>
+		<div class="form-group">
+			<label for="eventCityInput">City:</label>
+			<input type="text" class="form-control" id="eventCityInput" name="eventCity" placeholder="Type City">
+		</div>
+		<div class="form-group">
+			<label for="eventStateInput">State:</label>
+			<input type="text" class="form-control" id="eventStateInput" name="eventState">
+		</div>
+		<div class="form-group">
+			<label for="eventZipCodeInput">Zip Code:</label>
+			<input type="text" class="form-control" id="eventZipCodeInput" name="eventZipCode" placeholder="Type Zip Code">
+		</div>
+		<div class="form-group">
+			<button type="button" class="btn btn-primary btn-block" id="create-event">Create Event</button>
+		</div>
+
+	</form>
+
+</template>
