@@ -13,7 +13,7 @@ Meteor.publish('events', function(){
   //return Events.find({ 'start' : { $gte : start}, 'end' : { $lte : end}}, {sort: {pop: 1}, limit:5});
   //return Events.find({ 'start' : { $gte : 1471204203087}, 'end' : {$lte: 1472691666582}}, {sort: {pop: -1}, limit: 5});
   //return Events.find({ 'start' : { $gte : 1471204203087}, 'end' : {$lte: 1472691666582}}, {sort: {pop: -1}, limit: 5});
-  return Events.find({}, {sort: {eventNumberInAttendance:-1}, limit: 5});
+  return Events.find({}, {sort: {eventNumberInAttendance:-1}});
 });
 
 
