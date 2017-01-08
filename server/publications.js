@@ -1,4 +1,4 @@
-Meteor.publish('events', function(){
+Meteor.publish('top5', function(){
   // should be a function of Date, Time, location, Distance from location, Sort option (such as popularity, friends, or catagory of events...ex with kids)
 
   Meteor._sleepForMs(1000);
@@ -18,6 +18,12 @@ Meteor.publish('events', function(){
 
 
 // -----Primary Venue Publication-----
-Meteor.publish("venues", function() {
-  return Venues.find({});
-})
+Meteor.publish("venues", function(venueId) {
+  return Venues.find({_id: venueId});
+  console.log(Venues.find({_id: venueId}).fetch());
+});
+
+Meteor.publish("eventFlyer", function(eventId){
+  return Events.find({_id: eventId});
+  console.log(Events.find({_id: eventId}).fetch());
+});

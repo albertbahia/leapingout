@@ -51,6 +51,7 @@ Meteor.methods({
 		// Update/push created event's id to venue field venueEventId's
 
 		return "hello world!";
+
 	},
 
 	getEvents: function() {

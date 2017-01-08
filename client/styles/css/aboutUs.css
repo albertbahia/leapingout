@@ -1,0 +1,133 @@
+
+
+/*CSS controls here */
+  body {
+    font-family: 'Raleway', sans-serif;
+    width: 960px;
+    color: #665544;
+/* what color is this? Dark grey for the text*/
+
+    margin: 0 auto;
+    text-align: left;
+    /*-moz-box-shadow: 0 10px 20px #777777;*/
+    -webkit-box-shadow: 0 10px 20px #777777;
+    box-shadow: 0 10px 20px #777777;
+  }
+
+  div.menu {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  div.logo {
+    float: left;
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 20px
+  }
+
+  div.LObanner {
+    float: left;
+    background-color: #61DBC3;
+    color: #FFFFFF;
+    width: 940px;
+    height: 250px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  div.footer {
+    float: left;
+    background-color: #f2f2f2;
+    color: #FFFFFF;
+    width: 960px;
+    height: 50px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  div.LOwords {
+    float: left;
+    background-color: #61DBC3;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: bold;
+    width: 900px;
+    height: 71px;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+  }
+
+  div.title {
+    float: left;
+    color: #61DBC3;
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+  }
+
+  div.blurb {
+    float: left;
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+  }
+
+  table.staff {
+    width: 940px;
+    color: #61DBC3;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 0px;
+  }
+
+  th.head {
+    padding: 0px;
+    width: 170px;
+    height: 150px;
+  }
+
+  th.names {
+    padding: 0px;
+    width: 100px;
+    height: 40px;
+  }
+
+  td.desc {
+    color: #000000;
+    padding: 10px;
+    height: 50px;
+  }
+
+  td {
+    padding: 10px;
+    height: 50px;
+  }
+
+  img.banner {
+    max-width:100%;
+    max-height:100%;
+  }
+
+  img.logo {
+    max-width:100%;
+    max-height:100%;
+    float: left;
+  }
+  img.button {
+    max-width:100%;
+    max-height:100%;
+  }
