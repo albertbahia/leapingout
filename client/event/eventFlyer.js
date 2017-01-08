@@ -1,6 +1,7 @@
- 
-Meteor.subscribe("events");
-Meteor.subscribe("venues");
+
+//Meteor.subscribe("events");
+//Meteor.subscribe("venues");
+//Meteor.subscribe('eventFlyer', this.params._id);
 
 Template.eventFlyer.helpers({
   findEvent: function() {
@@ -23,15 +24,9 @@ var eventId  = Session.get('selectedId');
 
 		console.log( Session.get('selectedId'));
 
-
 		Events.remove({_id: eventId});
-
-
-
-
-
 
 }
 
-	
+
 })

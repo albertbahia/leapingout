@@ -39,23 +39,48 @@ Template.picky.events({
 
 Template.kenTime.onRendered(function() {
   // ---------Venues publication------------------
-  var venuesCollection = this.subscribe('venues');
+  //var venuesCollection = this.subscribe('venues');
   // ---------------------------------------------
 
   this.autorun(function() {
-    if (venuesCollection.ready()) {
-      console.log("> Subscription Recived");
-      let venues = Venues.find().fetch();
+    //if (venuesCollection.ready()) {
+    //  console.log("> Subscription Recived");
+    let top5Events = Events.find().fetch()
 
-      console.log(venues[0]);
+    let showEvents=[];
+
+    for (i=0; i<=4; i++){
+      showEvents.push({
+        start: moment(top5Events[i].eventStartDate._i),
+        end: moment(top5Events[i].eventEndDate._i),
+        content: top5Events[i].eventName,
+        group: (i + 1),
+        id: (i+1)
+      });
+    };
+
+    console.log(showEvents)
+
+      let showVenues = Venues.find().fetch();
+      //let eventNumber = showEvents.count();
+
+      // for (i = 0; i<=eventNumber; i++) {
+      //   var venuesCollection[i] = this.subscribe('venues', showEvents[i].eventVenueId);
+      //   console.log("venues", venuesCollection );
+      // };
+
+
+
+
+      //console.log(venues[0]);
 
       let container = document.getElementById('mytimeline');
 
-      let venueLinkOne = "<a href='/venues/" + venues[0]._id + "'>" + venues[0].venueName + "</a>",
-          venueLinkTwo = "<a href='/venues/" + venues[1]._id + "'>" + venues[1].venueName + "</a>",
-          venueLinkThree = "<a href='/venues/" + venues[2]._id + "'>" + venues[2].venueName + "</a>",
-          venueLinkFour = "<a href='/venues/" + venues[3]._id + "'>" + venues[3].venueName + "</a>",
-          venueLinkFive = "<a href='/venues/" + venues[4]._id + "'>" + venues[4].venueName + "</a>";
+      let venueLinkOne = "<a href='/venues/" + top5Events[0].eventVenueId + "'>" + showVenues[0].venueName + "</a>",
+          venueLinkTwo = "<a href='/venues/" + top5Events[1].eventVenueId + "'>" + showVenues[1].venueName + "</a>",
+          venueLinkThree = "<a href='/venues/" + top5Events[2].eventVenueId + "'>" + showVenues[2].venueName + "</a>",
+          venueLinkFour = "<a href='/venues/" + top5Events[3].eventVenueId + "'>" + showVenues[3].venueName + "</a>",
+          venueLinkFive = "<a href='/venues/" + top5Events[4].eventVenueId + "'>" + showVenues[4].venueName + "</a>";
 
 
       var groups = new vis.DataSet([{
@@ -90,12 +115,12 @@ Template.kenTime.onRendered(function() {
       var windowEnd = moment(Session.get('picky')).add(7, 'days').valueOf();
 
       for (i = 0; i <= 4; i++) {
-          events[i]["group"] = i + 2;
-          events[i]["id"] = i + 2;
+          showEvents[i]["group"] = i + 2;
+          showEvents[i]["id"] = i + 2;
       };
 
       var data = new vis.DataSet();
-      data.add(events);
+      data.add(showEvents);
 
 
 
@@ -157,9 +182,9 @@ Template.kenTime.onRendered(function() {
         // console.log("Start Window: ", moment(start).format("dddd, MMMM Do YYYY, h:mm:ss a"));
         // console.log("End Window", moment(end).format("dddd, MMMM Do YYYY, h:mm:ss a"));
         //timeline.setWindow(start, end, {animation: false});
-    } else {
-        console.log("> Not ready");
-    };
+    // } else {
+    //     console.log("> Not ready");
+    // };
   });
 
 
