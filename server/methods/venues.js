@@ -49,7 +49,7 @@ Meteor.methods({
 		});
 
 		return;
-	},
+	}/*,
 
 	getVenues: function() {
 
@@ -70,5 +70,5 @@ Meteor.methods({
 		}
 
 		return venuesArray;
-	}
+	}*/
 });
