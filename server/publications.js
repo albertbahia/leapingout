@@ -13,14 +13,9 @@ Meteor.publish('top5', function(){
   //return Events.find({ 'start' : { $gte : start}, 'end' : { $lte : end}}, {sort: {pop: 1}, limit:5});
   //return Events.find({ 'start' : { $gte : 1471204203087}, 'end' : {$lte: 1472691666582}}, {sort: {pop: -1}, limit: 5});
   //return Events.find({ 'start' : { $gte : 1471204203087}, 'end' : {$lte: 1472691666582}}, {sort: {pop: -1}, limit: 5});
-	
-	var targetTime = moment();		
-	var rangeWindow = 5; //hours		
-	var rangeStart = moment(targetTime).subtract(rangeWindow/2, 'hours').valueOf();		
-	var rangeEnd = moment(targetTime).add(rangeWindow/2, 'hours').valueOf();		
-	
-	return Events.find({'eventStartDate._i': { $lt : rangeEnd }, 'eventEndDate._i':{ $gte: rangeStart}}, {sort: {eventNumberInAttendance:-1}, limit: 5}); 
+  return Events.find({}, {sort: {eventNumberInAttendance:-1}});
 });
+
 
 // -----Primary Venue Publication-----
 Meteor.publish("venues", function(venueId) {
