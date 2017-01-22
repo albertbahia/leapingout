@@ -3,7 +3,20 @@ Meteor.methods({
 
 		let currentUser = Meteor.user();
 
-		check(venue, Object);
+		check(venue, {
+			venueName: String,
+			venueStreetAddress: String,
+			venueCity: String,
+			venueState: String, 
+			venueLatLong: String,
+			venuePopularityRating: Number,
+			venueCountry: String,
+			venueEventIds: Array,
+			venueCreatorId: String,
+			venueCreatedAt: Date,
+			venueUpdatedAt: Date,
+			venueProfileImageUrl: String
+		});
 		check(currentUser, Object);
 
 		// console.log(venue.venueData);
