@@ -55,6 +55,9 @@ ejson@1.0.13
 email@1.1.18
 es5-shim@4.6.15
 fastclick@1.0.13
+fortawesome:fontawesome@4.4.0_1
+fourseven:scss@3.8.1
+fullcalendar:fullcalendar@2.9.0
 geojson-utils@1.0.10
 hot-code-push@1.0.4
 html-tools@1.0.11
@@ -83,6 +86,7 @@ meteor@1.6.0
 meteor-base@1.0.4
 meteorhacks:picker@1.0.3
 meteorhacks:search-source@1.4.2
+meteortoys:toykit@3.0.4
 minifier-css@1.2.15
 minifier-js@1.2.15
 minimongo@1.0.19
@@ -94,6 +98,7 @@ momentjs:moment@2.17.1
 mongo@1.1.14
 mongo-id@1.0.6
 mongo-livedata@1.0.12
+msavin:mongol@2.0.1
 npm-bcrypt@0.9.2
 npm-mongo@2.2.11_2
 observe-sequence@1.0.14
@@ -132,6 +137,7 @@ templating@1.2.15
 templating-compiler@1.2.15
 templating-runtime@1.2.15
 templating-tools@1.0.5
+themeteorchef:bert@2.1.1
 tracker@1.1.1
 tsega:bootstrap3-datetimepicker@4.17.37_1
 twbs:bootstrap@3.3.6
