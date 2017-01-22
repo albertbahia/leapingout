@@ -21,3 +21,8 @@ Meteor.publish('events', function(){
 Meteor.publish("venues", function() {
   return Venues.find({});
 })
+
+
+Meteor.publish('YoEvents', function() {
+  return Calevents.find();
+});
