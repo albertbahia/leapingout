@@ -18,7 +18,7 @@ if (Meteor.users.find({}).count() === 0){
 		Meteor.users.insert({
 			name: "Kenny Kwok",
 			email: "pigeonplan@gmail.com",
-			phone: helpers.createCard.phone(),
+			phone: helpers.createCard().phone,
 			avatar: image.avatar()
 		})
 }
@@ -132,7 +132,7 @@ if (Events.find({}).count() === 0) {
 				//var randomVenue = Venues.find({},{skip:10, limit:1});
 
 				startTime = getRandomIntInclusive(min, max);
-	      endTime = getRandomIntInclusive(startTime, max);
+	      endTime = getRandomIntInclusive(startTime, moment(startTime).add(1, 'days').valueOf());
 
 
 	 			Events.insert({

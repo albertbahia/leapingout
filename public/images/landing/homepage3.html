@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<!-- This is the PHP to get today's date by default
+<?php
+	$timezone = "America/New_York";
+    // Fetch the year, month and day
+    $year = date(Y);
+    $month = date(m);
+    $day = date(d);
+
+    // Merge them into a string accepted by the input field
+    $date_string = "$year-$month-$day";
+?>
+ -->
+<!-- This is the Home page HTML/CSS for leapingout.com -->
+<html>
+<head>
+	<title>
+		Leaping Out
+	</title>
+
+	<style type="text/css">
+	/*CSS controls here */
+		body {
+			font-family: Arial, Verdana, sans-serif;
+			width: 960px;
+			color: #665544;
+	/* what color is this? Dark grey for the text*/
+
+			margin: 0 auto;
+			text-align: center;
+			/*-moz-box-shadow: 0 10px 20px #777777;*/
+			-webkit-box-shadow: 0 10px 20px #777777;
+			box-shadow: 0 10px 20px #777777;
+		}
+
+		/*div.logo {
+			float: center;
+			width: 940px;
+			height: auto;
+			margin: 0 auto;
+			margin-top: 10px;
+			-webkit-box-shadow: 0 10px 20px #777777;
+			box-shadow: 0 10px 20px #777777;
+		}*/
+/*
+		div.signin {
+			float: right;
+			width: 180px;
+			background-color: #000000;
+			border: 5px;
+			border-color: #111111;
+			vertical-align: bottom;
+		}
+*/
+		div.LObanner {
+			position: relative;
+			width: 940px;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		div.menuRibbon {
+			width: 940px;
+			height: 40px;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+
+		div.timeline{
+			float: left;
+			width: 720px;
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+
+		div.th1{
+			float: left;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+
+		}
+
+		div.th2{
+			float: left;
+			padding: 10px;
+			height: 30px;
+			text-align: center;
+
+		}
+
+		div.ctg{
+			float:right;
+			width: 200px;
+			height: 500px;
+			margin: 0 auto;
+			margin-top: 30px;
+			text-align: left;
+		}
+
+		img.logo {
+			float: left;
+			width: 160px;
+		}
+
+		input.loginBtn {
+			position: relative;
+			top: 65px;
+			right: -300px;
+
+		}
+
+		img.banner {
+			width: 940px;
+			text-align: center;
+			z-index: -1;
+		}
+
+		img.button {
+			float: left;
+			width: 40px;
+			height: 40px;
+		}
+
+		table.timeline {
+			width: 600px;
+			text-align: left;
+			margin: 0 auto;
+			/*-moz-box-shadow: 0 0 10px #777777;*/
+			-webkit-box-shadow: 0 0 10px #777777;
+			box-shadow: 0 0 10px #777777;
+			margin-bottom: 20px;
+		}
+
+		th, td {
+			padding: 10px;
+			height: 50px;
+		}
+
+		th {
+			border-bottom: 2px solid #111111;
+			text-align: center;
+		}
+
+		th.ctg {
+			border: 2px solid #111111;
+			margin-left: 25px;
+		}
+
+		tr.even {
+			background-color: #efefef;
+		}
+
+		footer {
+			margin-top: 100px;
+		}
+
+		div.tlogo {
+			position: absolute;
+			width: 160px;
+			top: 33px;
+			left: 15px;
+		}
+
+		#banner1 {
+			position: relative;
+			top: 5px;
+			left: 5px;
+		}
+
+	</style>
+
+</head>
+
+<body id = "bodyAll">
+	<!-- Start with putting in the logo on the top left of the page -->
+	<!-- <div class="logo">
+			<a href="homepage3.html">
+			<img id="toplogo" src="LeapingOutLogo.gif" alt="Leaping Out Logo" class="logo"/>
+			</a>
+
+
+	Place the sign in button at the top right of the page: MODAL
+			<input type = "submit" value = "Log in/Register" class = "loginBtn" />
+	</div>*/-->
+
+	<!-- Then place the banner, either Stephie or Steve -->
+	<div class="LObanner">
+		<div class="tlogo">
+			<a href="homepage3.html">
+			<!-- <img id="toplogo" src="LeapingOutLogo.gif" alt="Leaping Out Logo" class="logo"/> </a> -->
+		</div>
+			<input type = "submit" value = "Log in/Register" class = "loginBtn" style="position: absolute;right:15px;top:33px;"/>
+			<img id="banner1" src="backgroundMapMan.jpg" class="banner" alt="banner"/>
+	</div>
+
+	<!-- Under the banner is the ribbon of menu MODAL search bar, advanced search link, Date selector POPUP CALENDAR-->
+	<div id= "ribbon" class="menuRibbon">
+		<p>
+		<img id="menu" class = "button" src="Steffy\menu.gif" align="left" />
+
+		<!--Different Color Schemes-->
+		<button onclick="changeColor(0)" style="background-color:#61DBC3">Day</button>
+		<button onclick="changeColor(1)" style="background-color:#E5522F">Night</button>
+		<!--<button onclick="changeColor(2)" style="background-color:#3B596A">color 3</button>
+		<button onclick="changeColor(3)" style="background-color:#7E6AAA">color 4</button>
+		<button onclick="changeColor(4)" style="background-color:#9C4441">color 5</button> -->
+
+		<!--MODAL CODE HERE-->
+		<input type = "text" name = "keywords" size = "30" placeholder = "Enter Search Terms"/>
+		<input type = "submit" value = "Search" id = "KeySearch" />
+		<input type = "date" name = "date" size = "30" />
+		<input type = "submit" value = "Update" id = "updateDate"/>
+		</p>
+	</div>
+	<!--
+	<div id="colorbar" class="menuRibbon">
+		<p>
+			<div class ="th2">Day Color Palette</div>
+			<div class="th1" style="background-color:#00BF99"></div>
+			<div class="th1" style="background-color:#61DBC3"></div>
+			<div class="th1" style="background-color:#95EBDB"></div>
+			<div class="th1" style="background-color:#F2F2F2"></div>
+			<div class="th1" style="background-color:#626262"></div>
+
+
+			<div class ="th2">Night Color Palette</div>
+			<div class="th1" style="background-color:#01594A"></div>
+			<div class="th1" style="background-color:#E5522F"></div>
+			<div class="th1" style="background-color:#292B2E"></div>
+			<div class="th1" style="background-color:#FFE6A0"></div>
+			<div class="th1" style="background-color:#524D45"></div>
+		</p>
+	</div> -->
+
+	<!-- Top 5 hotspots on left, wheel perspective timeline in middle, category legend on right -->
+	<div id = "tlbody" class="timeline">
+		<h1> Top 5 Venues by Popularity
+		</h1>
+		<table class="timeline">
+			<tr>
+				<th></th>
+				<th>time slot 1</th>
+				<th>time slot 2</th>
+				<th>time slot 3</th>
+				<th>time slot 4</th>
+				<!--<th class= "ctg" rowspan="6"> Categories </th> -->
+			</tr>
+
+			<tr>
+				<th>Venue 1</th>
+				<td>Event 1-1</td>
+				<td>Event 1-2</td>
+				<td>Event 1-3</td>
+				<td>Event 1-4</td>
+			</tr>
+
+			<tr id = "ev1" class="even">
+				<th>Venue 2</th>
+				<td>Event 2-1</td>
+				<td>Event 2-2</td>
+				<td>Event 2-3</td>
+				<td>Event 2-4</td>
+			</tr>
+
+			<tr>
+				<th>Venue 3</th>
+				<td>Event 3-1</td>
+				<td>Event 3-2</td>
+				<td>Event 3-3</td>
+				<td>Event 3-4</td>
+			</tr>
+
+			<tr id = "ev2" class="even">
+				<th>Venue 4</th>
+				<td>Event 4-1</td>
+				<td>Event 4-2</td>
+				<td>Event 4-3</td>
+				<td>Event 4-4</td>
+			</tr>
+
+			<tr>
+				<th>Venue 5</th>
+				<td>Event 5-1</td>
+				<td>Event 5-2</td>
+				<td>Event 5-3</td>
+				<td>Event 5-4</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id = "cat" class = "ctg">
+		<h2> Categories
+		</h2>
+	</div>
+
+	<div height="200">
+		<p>  </p>
+		<p>  </p>
+		<p>  </p>
+		<p>  </p>
+		<p>  </p>
+		<p>  </p>
+		<p>  </p>
+	</div>
+	<footer height = "200" text-align= "center" position="absolute" bottom = "0px" left = "370px">
+		<p>  </p>
+		<p>  </p>
+		<p>  </p>
+		<p>  </p>
+		<p> Copyright 2015, Pigeon Plan Ltd. </p>
+
+	</footer>
+
+	<!-- Scrolling functions that are connected to the up and down buttons-->
+
+	<script type="text/javascript" language="JavaScript">
+		function scrollDivUp() {
+    		document.getElementById("d").scrollTop -=20;
+		}
+		function scrollDivDown() {
+    		document.getElementById("d").scrollTop +=20;
+		}
+		function scrollDivLeft() {
+    		document.getElementById("d").scrollLeft +=20;
+		}
+		function scrollDivRight() {
+    		document.getElementById("d").scrollLeft -=20;
+		}
+		function changeColor(c){
+			//<button onclick="changeColor(0)" style="background-color:#00BF99">color 1</button>
+		//<button onclick="changeColor(1)" style="background-color:#01594A">color 2</button>
+		//<button onclick="changeColor(2)" style="background-color:#3B596A">color 3</button>
+		//<button onclick="changeColor(3)" style="background-color:#7E6AAA">color 4</button>
+		//<button onclick="changeColor(4)" style="background-color:#9C4441">color 5</button>
+			var colors1 = ["#00BF99","#61DBC3","#95EBDB","#F2F2F2","#626262"];
+			//var colors2 = ["#E5522F","#292B2E","#FFE6A0","#01594A","#524D45"];
+			var colors2 = ["#01594A","#E5522F","#292B2E","#FFE6A0","#524D45"];
+			var colors3 = ["#3B596A","#427676","#3F9A82","#A1CD73","#ECDB60"];
+			var colors4 = ["#7E6AAA","#01B985","#7BDAB0","#F4DC95","#D6A558"];
+			var colors5 = ["#9C4441","#FFFFF1","#F1D8AA","#2E1A0A","#8E4A2B"];
+			var cSchemes = [colors1, colors2, colors3, colors4, colors5];
+			var imgNames = ["leaping_out5_withTransC.png","leaping_out5_nightC.png"]
+
+			document.getElementById("bodyAll").style.background= cSchemes[c][2];
+			document.getElementById("tlbody").style.background=cSchemes[c][3];
+			document.getElementById("ev1").style.background=cSchemes[c][1];
+			document.getElementById("ev2").style.background=cSchemes[c][1];
+			document.getElementById("cat").style.background=cSchemes[c][3];
+			document.getElementById("ribbon").style.background=cSchemes[c][2];
+			document.getElementById("menu").style.background=cSchemes[c][1];
+			document.getElementById("toplogo").src = imgNames[c];
+			//document.background-color=cSchemes[c][5];
+
+
+		}
+		</script>
+
+
+</body>
+
+</html>
