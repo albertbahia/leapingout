@@ -1,8 +1,47 @@
 <template name="landing">
 
 	<div class="landing-page">
-		{{> hotspots }}
+			<div class="LObanner">
+				<div class="tlogo">
+					<a href="homepage3.html"></a>
+					<!-- <img id="toplogo" src="LeapingOutLogo.gif" alt="Leaping Out Logo" class="logo"/> </a> -->
+				</div>
+					<img id="banner1" src="/images/landing/backgroundMapMan.jpg" class="banner" alt="banner"/>
+			</div>
+
+			<!-- Under the banner is the ribbon of menu MODAL search bar, advanced search link, Date selector POPUP CALENDAR-->
+			<div id= "ribbon" class="menuRibbon">
+				<p>
+				<img id="menu" class = "button" src="/images/landing/Steffy/menu.gif" align="left" />
+			</p>
+		</div>
+			<!-- Top 5 hotspots on left, wheel perspective timeline in middle, category legend on right -->
+			<div id = "tlbody" class="timeline">
+				{{> hotspots }}
+			</div>
+
+			<div id = "cat" class = "ctg">
+				<h2> Categories
+				</h2>
+			</div>
+
+			<div height="200">
+				<p>  </p>
+				<p>  </p>
+				<p>  </p>
+				<p>  </p>
+				<p>  </p>
+				<p>  </p>
+				<p>  </p>
+			</div>
+			<footer height = "200" text-align= "center" position="absolute" bottom = "0px" left = "370px">
+				<p>  </p>
+				<p>  </p>
+				<p>  </p>
+				<p>  </p>
+				<p> Copyright 2015, Pigeon Plan Ltd. </p>
+			</footer>
+
 	</div>
 
 </template>
-

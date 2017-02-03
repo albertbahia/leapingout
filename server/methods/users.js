@@ -1,4 +1,3 @@
-// Allows/Denys
 Meteor.users.allow({
   insert() { return false; },
   update() { return false; },
