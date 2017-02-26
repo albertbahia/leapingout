@@ -3,7 +3,23 @@ Meteor.methods({
 
 		let currentUser = Meteor.user();
 
-		check(event, Object);
+		check(event, {
+			eventName: String,
+			eventVenueId: String,
+			eventStreetAddress: String,
+			eventStreetName: String,
+			eventCity: String,
+			eventStateAbbr: String,
+			eventZipCode: String,
+			eventLat: String,
+			eventLon: String,
+			eventStartDate: Object,
+			eventEndDate: Object,
+			createdUser: String,
+			eventDateCreated: Number,
+			summary: String,
+			eventNumberInAttendance: Number
+		});
 		check(currentUser, Object);
 
 		console.log("createEvent server method");
@@ -13,22 +29,20 @@ Meteor.methods({
 		// console.log(event);
 		let eventId = Events.insert({
 			eventName: event.eventData.eventName,
-			eventStreetAddress: event.eventData.eventStreetAddress,
-			eventNumberInAttendance: 0,
-			eventPrice: event.eventData.eventPrice,
-			eventVenueName: event.eventData.eventVenueName,
 			eventVenueId: event.eventData.eventVenueId,
-			eventType: event.eventData.eventType,
-			eventStartTime: event.eventData.eventStartTime,
-			eventEndTime: event.eventData.eventEndTime,
-			eventHostName: event.eventData.eventHostName,
-			eventNumberMalesAttending: 0,
-			eventNumberFemalesAttending: 0,
+			eventStreetAddress: event.eventData.eventStreetAddress,
 			eventCity: event.eventData.eventCity,
 			eventState: event.eventData.eventState,
 			eventZipCode: event.eventData.eventZipCode,
+			eventStartTime: event.eventData.eventStartTime,
+			eventEndTime: event.eventData.eventEndTime,
+			eventPrice: event.eventData.eventPrice,
+			eventVenueName: event.eventData.eventVenueName,
+			eventType: event.eventData.eventType,
+			eventHostName: event.eventData.eventHostName,
+			eventUpdatedAt: Date.now(),
 			eventCreatedAt: Date.now(),
-			eventUpdatedAt: Date.now()
+			eventNumberInAttendance: 0,
 			//eventPublic: formEventData[0][12].value,
 			//eventPrivate: formEventData[0][13].value,
 		});

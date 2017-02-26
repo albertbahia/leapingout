@@ -34,8 +34,6 @@ chrismbeckett:toastr
 reactive-var@1.0.11
 peppelg:bootstrap-3-modal
 ian:accounts-ui-bootstrap-3
-
-
 meteorhacks:search-source
 babel-compiler@6.13.0
 lepozepo:s3
@@ -47,5 +45,5 @@ ecmascript@0.6.1
 momentjs:moment
 sacha:spin
 tsega:bootstrap3-datetimepicker
-aldeed:collection2
+aldeed:collection2-core@2.0.0
 npm-bcrypt

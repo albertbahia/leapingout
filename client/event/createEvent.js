@@ -2,25 +2,27 @@ Template.createEvent.events({
 	"click #create-event" : function(event) {
 		event.preventDefault();
 
-		var formEventData = document.getElementsByClassName("new-event");
-		// console.log($('select#venueName option:selected').text());
+		let formEventData = document.getElementsByClassName("new-event");
+		
+		let eventFormInput = formEventData[0];
 		var eventData = {
-			eventName: formEventData[0][0].value,
-			eventStreetAddress: formEventData[0][1].value,
-			eventPrice: formEventData[0][2].value,
+			eventName: eventFormInput[0].value,
+			eventStreetAddress: eventFormInput[1].value,
+			eventPrice: eventFormInput[2].value,
 			eventVenueName: $('select#venueName option:selected').text(),
-			eventVenueId: formEventData[0][3].value,
-			eventType: formEventData[0][4].value,
-			eventStartTime: formEventData[0][5].value,
-			eventEndTime: formEventData[0][6].value,
-			eventHostName: formEventData[0][7].value,
-			eventCity: formEventData[0][8].value,
-			eventState: formEventData[0][9].value,
-			eventZipCode: formEventData[0][10].value
-			//eventPublic: formEventData[0][12].value,
-			//eventPrivate: formEventData[0][13].value,
+			eventVenueId: eventFormInput[3].value,
+			eventType: eventFormInput[4].value,
+			eventStartTime: eventFormInput[5].value,
+			eventEndTime: eventFormInput[6].value,
+			eventHostName: eventFormInput[7].value,
+			eventCity: eventFormInput[8].value,
+			eventState: eventFormInput[9].value,
+			eventZipCode: eventFormInput[10].value
+			//eventPublic: eventFormInput[12].value,
+			//eventPrivate: eventFormInput[13].value,
 		};
 
+		// console.log('zipcode: ' + eventFormInput[10].value)
 		Meteor.call("createEvent", {
 				eventData: eventData
 			}, function(err, res) {
@@ -32,8 +34,8 @@ Template.createEvent.events({
 		});
 
 		// ---Clear form input fields
-		for (var i = 0; i < formEventData[0].length; i++) {
-			formEventData[0][i].value = "";
+		for (var i = 0; i < eventFormInput.length; i++) {
+			eventFormInput[i].value = "";
 		}
 
 		// ---Prevent default form submit

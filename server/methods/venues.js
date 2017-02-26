@@ -3,7 +3,21 @@ Meteor.methods({
 
 		let currentUser = Meteor.user();
 
-		check(venue, Object);
+		console.log('createVenue method venue parameter: ' + venue.venueData);
+
+		check(venue.venueData, {
+			venueName: String,
+			venueStreetAddress: String,
+			venueCity: String,
+			venueState: String, 
+			venuePopularityRating: Number,
+			venueCountry: String,
+			venueEventIds: Array,
+			venueCreatorId: String,
+			venueCreatedAt: Date,
+			venueUpdatedAt: Date,
+			venueProfileImageUrl: String
+		});
 		check(currentUser, Object);
 
 		// console.log(venue.venueData);
@@ -49,7 +63,7 @@ Meteor.methods({
 		});
 
 		return;
-	},
+	}/*,
 
 	getVenues: function() {
 
@@ -70,5 +84,5 @@ Meteor.methods({
 		}
 
 		return venuesArray;
-	}
+	}*/
 });
