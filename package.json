@@ -7,6 +7,7 @@
     "babel-runtime": "^6.22.0",
     "faker": "^3.1.0",
     "lodash": "^4.17.4",
+    "simpl-schema": "^0.1.1",
     "vis": "^4.16.1"
   },
   "devDependencies": {},

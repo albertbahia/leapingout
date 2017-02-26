@@ -3,12 +3,13 @@ Meteor.methods({
 
 		let currentUser = Meteor.user();
 
-		check(venue, {
+		console.log('createVenue method venue parameter: ' + venue.venueData);
+
+		check(venue.venueData, {
 			venueName: String,
 			venueStreetAddress: String,
 			venueCity: String,
 			venueState: String, 
-			venueLatLong: String,
 			venuePopularityRating: Number,
 			venueCountry: String,
 			venueEventIds: Array,
