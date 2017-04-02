@@ -1,0 +1,35 @@
+<template name="feedback">
+  <div class="modal fade" id="feedbackModal">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 >Feedback</h3>
+          <span class="close">&times;</span>
+        </div>
+
+
+        <div class="modal-body">
+         
+          <!-- <input type="text" rows="4" cols ="50" id="feedbackBody" class ="form-control" name="feedbackBody" 
+          style ="height:200px"  />   -->
+         <textarea rows="4" cols ="50" id="feedbackBody"  style ="height:200px" class ="form-control"> </textarea> 
+
+      
+        </div>
+
+         <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="send" data-dismiss="modal" data-toggle="modal" >Send</button>
+            {{> feedbackConfirm}}
+
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+     
+        	 
+       </div>
+
+      </div>
+     </div> 
+
+    </template>
